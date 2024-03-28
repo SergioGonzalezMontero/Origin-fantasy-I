@@ -1,0 +1,4 @@
+repository "Repositorio Origin Fantasy I@sergiogonzalezcorreobasura@cloud"
+  path "/"
+    br "/main"
+    co "/main"

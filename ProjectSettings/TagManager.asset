@@ -50,9 +50,12 @@ TagManager:
   - name: Paredes
     uniqueID: 2127570013
     locked: 0
-  - name: Objetos
+  - name: Objetos Detras
     uniqueID: 3683720917
     locked: 0
   - name: Personaje
     uniqueID: 600207961
+    locked: 0
+  - name: Objetos Delante
+    uniqueID: 4170540279
     locked: 0

@@ -11,10 +11,29 @@ public class Per_Movimiento : MonoBehaviour
 
     private Animator anim;
 
+    private bool golpeando = false;
+
     private void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+    }
+
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0) && !golpeando)
+        {
+            anim.SetTrigger("Golpe");
+            golpeando=true;
+            Debug.Log(golpeando);
+        }
+    }
+    void FinDeAtaque()
+    {
+        // Indicar que el ataque ha finalizado
+        golpeando = false ;
+        Debug.Log(golpeando);
     }
 
     private void FixedUpdate()

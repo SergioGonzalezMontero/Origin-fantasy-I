@@ -133,9 +133,10 @@ GameObject:
   m_Component:
   - component: {fileID: 73946926}
   - component: {fileID: 73946925}
+  - component: {fileID: 73946927}
   m_Layer: 0
   m_Name: Prueba_Golpe
-  m_TagString: Enemigo
+  m_TagString: Activable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,6 +202,18 @@ Transform:
   - {fileID: 1903585273}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &73946927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73946924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d6e13c266e33f44857ebc1a02a78dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &237258125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,6 +2941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e20c19a23fb32641bb84c4ef3703971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contr_nevera: {fileID: 0}
 --- !u!1 &1745616094
 GameObject:
   m_ObjectHideFlags: 0

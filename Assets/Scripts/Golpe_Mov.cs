@@ -5,10 +5,13 @@ using UnityEngine;
 public class Golpe_Mov : MonoBehaviour
 {
     private BoxCollider2D colGolpe;
+    public Contr_Nevera contr_nevera = new Contr_Nevera();
+    private int cont = 0;
 
     private void Awake()
     {
-        colGolpe = GetComponent<BoxCollider2D>();
+        contr_nevera = FindAnyObjectByType<Contr_Nevera>();
+        colGolpe = GetComponentInParent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D otro)
@@ -19,7 +22,9 @@ public class Golpe_Mov : MonoBehaviour
         }
         else if (otro.CompareTag("Activable"))
         {
-            Debug.Log("Interruptor Activado");
+            cont = cont + 1;
+            Debug.Log(cont);
+            contr_nevera.Activado();
         }
     }
 }

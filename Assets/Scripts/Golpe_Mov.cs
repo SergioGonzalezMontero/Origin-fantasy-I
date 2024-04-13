@@ -5,7 +5,7 @@ using UnityEngine;
 public class Golpe_Mov : MonoBehaviour
 {
     private BoxCollider2D colGolpe;
-    public Contr_Nevera contr_nevera = new Contr_Nevera();
+    public Contr_Nevera contr_nevera;
     private int cont = 0;
 
     private void Awake()

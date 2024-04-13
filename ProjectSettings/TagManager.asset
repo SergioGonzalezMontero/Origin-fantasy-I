@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Activable
   - Enemigo
+  - Tocar
   layers:
   - Default
   - TransparentFX

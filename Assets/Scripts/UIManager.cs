@@ -7,6 +7,10 @@ public class UIManager : MonoBehaviour
 {
     private int totalGlobos;
     [SerializeField] private Text textoGlobos;
+    [SerializeField] private List<GameObject> listaCorazones;
+    [SerializeField] private Sprite corazonLleno, corazonMitad, corazonVacio;
+
+
 
     void Start()
     {
@@ -17,5 +21,10 @@ public class UIManager : MonoBehaviour
     {
         totalGlobos += globo;
         textoGlobos.text = totalGlobos.ToString();
+    }
+
+    public void RestaCorazones (int indice)
+    {
+
     }
 }

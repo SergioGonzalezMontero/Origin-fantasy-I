@@ -11,6 +11,11 @@ public class Per_Movimiento : MonoBehaviour
 
     private Animator anim;
 
+    private int vidaPersonake = 6;
+
+
+    [SerializeField] UIManager uiManager;
+
     private void Awake()
     {
         rig = GetComponent<Rigidbody2D>();

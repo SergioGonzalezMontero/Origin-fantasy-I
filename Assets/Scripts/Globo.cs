@@ -8,6 +8,7 @@ public class Globo : MonoBehaviour
     public static event SumaGlobo sumaGlobo;
 
     [SerializeField] private int cantidadGlobos;
+    [SerializeField] Per_Movimiento per_Movimiento;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +18,7 @@ public class Globo : MonoBehaviour
             {
                 SumarGlobo();
                 Destroy(this.gameObject);
+                per_Movimiento.ActualizarVida(true, 2);
             }
         }
     }

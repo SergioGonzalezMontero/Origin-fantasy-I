@@ -11,7 +11,8 @@ public class Per_Movimiento : MonoBehaviour
 
     private Animator anim;
 
-    private int vidaPersonake = 6;
+    private int vidaPersonaje = 6;
+    private int vidaMaxPersonaje = 6;
 
 
     [SerializeField] UIManager uiManager;
@@ -38,13 +39,24 @@ public class Per_Movimiento : MonoBehaviour
 
     private void Movimiento()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical= Input.GetAxis("Vertical");
 
-        rig.velocity = new Vector2(horizontal, vertical) * velocidad;
-        anim.SetFloat("Velocidad", Mathf.Abs(rig.velocity.magnitude));
+        //rig.velocity = new Vector2(horizontal, vertical) * velocidad;
+        //anim.SetFloat("Velocidad", Mathf.Abs(rig.velocity.magnitude));
 
-        if(horizontal >  0)
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        // Normalizar el movimiento para que el personaje no se mueva más rápido en diagonal
+        Vector2 movimiento = new Vector2(horizontal, vertical).normalized;
+
+        // Calcular la velocidad de movimiento multiplicando por la velocidad y el tiempo
+        Vector2 velocidadMovimiento = movimiento * velocidad * Time.deltaTime;
+
+        // Aplicar el movimiento al Rigidbody2D
+        rig.MovePosition(rig.position + velocidadMovimiento);
+        anim.SetFloat("Velocidad", Mathf.Abs(velocidadMovimiento.magnitude));
+
+        if (horizontal >  0)
         {
             anim.SetInteger("Direccion", 1);
 
@@ -62,6 +74,31 @@ public class Per_Movimiento : MonoBehaviour
         else if (vertical < 0)
         {
             anim.SetInteger("Direccion", 2);
+        }
+    }
+
+    public void ActualizarVida (bool recuperacion, int cantidad)
+    {
+        //Debug.Log(recuperacion+";"+cantidad+"");
+
+        if (recuperacion)
+        {
+            if (vidaPersonaje < vidaMaxPersonaje)
+            {
+                vidaPersonaje += cantidad;
+                if(vidaPersonaje > vidaMaxPersonaje)
+                {
+                    vidaPersonaje = vidaMaxPersonaje;
+                }
+                uiManager.ActualizarVidaUI(vidaPersonaje);
+            }
+        }
+        else
+        {
+            if(vidaPersonaje > 0) {
+                vidaPersonaje -= cantidad;
+                uiManager.ActualizarVidaUI(vidaPersonaje);
+            }
         }
     }
 }

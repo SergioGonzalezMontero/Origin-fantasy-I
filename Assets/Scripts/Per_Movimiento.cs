@@ -40,6 +40,8 @@ public class Per_Movimiento : MonoBehaviour
     private void Movimiento()
     {
 
+        //float horizontal = Input.GetAxis("Horizontal");
+        //float vertical = Input.GetAxis("Vertical");
         //rig.velocity = new Vector2(horizontal, vertical) * velocidad;
         //anim.SetFloat("Velocidad", Mathf.Abs(rig.velocity.magnitude));
 

@@ -50,6 +50,9 @@ TagManager:
   - name: Suelo
     uniqueID: 2225521509
     locked: 0
+  - name: Suelo Alto
+    uniqueID: 1409990621
+    locked: 0
   - name: Paredes
     uniqueID: 2127570013
     locked: 0

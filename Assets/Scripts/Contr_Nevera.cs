@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Contr_Nevera : MonoBehaviour
 {
+    public ControlDialogos dialogos; 
+
     private Animator anim;
 
     private bool abierto = false;
@@ -14,6 +16,7 @@ public class Contr_Nevera : MonoBehaviour
 
     public void Activado()
     {
+        dialogos.ActivaTexto();
         if(abierto)
         {
             anim.SetBool("Abierto", false);

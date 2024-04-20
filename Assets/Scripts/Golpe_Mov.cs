@@ -23,7 +23,7 @@ public class Golpe_Mov : MonoBehaviour
         else if (otro.CompareTag("Activable"))
         {
             cont = cont + 1;
-            Debug.Log(cont);
+            //Debug.Log(cont);
             contr_nevera.Activado();
         }
     }

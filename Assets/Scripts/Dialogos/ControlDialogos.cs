@@ -6,22 +6,30 @@ using UnityEngine;
 [System.Serializable]
 public class ControlDialogos : MonoBehaviour
 {
-    private Animator anim;
-    private Queue<string> colaDialogos;
+    public Animator anim;
+    private Queue<string> colaDialogos = new Queue<string>();
     Textos texto;
     [SerializeField] TextMeshProUGUI textoPantalla;
 
+    public GameObject cartel;
+
     public void ActivarCartel(Textos textoObjeto)
     {
-        anim.SetBool("Cartel", true);
+        Debug.Log("ActivarCartel");
+
+        anim.SetTrigger("Entrar");
+        cartel.SetActive(true);
         texto = textoObjeto;
     }
 
     public void ActivaTexto() 
     {
+        Debug.Log("ActivaTexto");
+
         colaDialogos.Clear();
         foreach (string textoGuardar in texto.arrayTextos)
         {
+            Debug.Log("ActivaTexto");
             colaDialogos.Enqueue(textoGuardar);
         }
         SiguienteFrase();
@@ -29,7 +37,9 @@ public class ControlDialogos : MonoBehaviour
 
     public void SiguienteFrase()
     {
-        if(colaDialogos.Count == 0)
+        Debug.Log("SiguienteFrase");
+
+        if (colaDialogos.Count == 0)
         {
             CierraCartel();
             return;
@@ -41,7 +51,16 @@ public class ControlDialogos : MonoBehaviour
 
     void CierraCartel()
     {
-        anim.SetBool("Cartel", false);
+        Debug.Log("CierraCartel");
+
+        anim.SetTrigger("Salir");
     }
 
+
+    public void DesactivarCartel()
+    {
+        Debug.Log("DesactivarCartel");
+
+        cartel.SetActive(false);
+    }
 }

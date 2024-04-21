@@ -16,7 +16,7 @@ public class Contr_Nevera : MonoBehaviour
 
     public void Activado()
     {
-        dialogos.ActivaTexto();
+        
         if(abierto)
         {
             anim.SetBool("Abierto", false);

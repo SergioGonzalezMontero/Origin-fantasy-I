@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -17,9 +18,12 @@ public class ControlDialogos : MonoBehaviour
     {
         Debug.Log("ActivarCartel");
 
+        Per_Movimiento.interactuando = true;
+
         anim.SetTrigger("Entrar");
         cartel.SetActive(true);
         texto = textoObjeto;
+        ActivaTexto();
     }
 
     public void ActivaTexto() 
@@ -29,6 +33,7 @@ public class ControlDialogos : MonoBehaviour
         colaDialogos.Clear();
         foreach (string textoGuardar in texto.arrayTextos)
         {
+            Console.WriteLine(colaDialogos.Count);
             Debug.Log("ActivaTexto");
             colaDialogos.Enqueue(textoGuardar);
         }
@@ -62,5 +67,7 @@ public class ControlDialogos : MonoBehaviour
         Debug.Log("DesactivarCartel");
 
         cartel.SetActive(false);
+
+        Per_Movimiento.interactuando = false;
     }
 }

@@ -14,6 +14,8 @@ public class Per_Movimiento : MonoBehaviour
     private int vidaPersonaje = 6;
     private int vidaMaxPersonaje = 6;
 
+    public static bool interactuando = false;
+
 
     [SerializeField] UIManager uiManager;
 
@@ -26,10 +28,14 @@ public class Per_Movimiento : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(!interactuando)
         {
-            anim.SetTrigger("Golpe");
+            if(Input.GetMouseButtonDown(0))
+            {
+                anim.SetTrigger("Golpe");
+            }
         }
+        
     }
 
     private void FixedUpdate()

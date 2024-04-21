@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class Golpe_Mov : MonoBehaviour
@@ -27,4 +28,6 @@ public class Golpe_Mov : MonoBehaviour
             contr_nevera.Activado();
         }
     }
+
+
 }

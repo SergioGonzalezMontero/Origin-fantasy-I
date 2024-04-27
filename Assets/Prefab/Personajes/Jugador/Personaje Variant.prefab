@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1648545262461324072}
+  m_Father: {fileID: 53263028261494579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &388109740110298004
 Camera:
@@ -152,20 +152,36 @@ PrefabInstance:
       propertyPath: velocidad
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1204942388666835505, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
+      propertyPath: m_Name
+      value: Personaje Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648545262461324072, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3641904208393494086, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
       propertyPath: m_TagString
       value: Tocar
       objectReference: {fileID: 0}
+    - target: {fileID: 8916557003035106829, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916557003035106829, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 53263028261494579, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1648545262461324072, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1490424265220144736}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
---- !u!4 &1648545262461324072 stripped
+--- !u!4 &53263028261494579 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 53263028261494579, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1648545262461324072, guid: e9760cd4ee3bc774eaf9a92a8888493b, type: 3}
   m_PrefabInstance: {fileID: 1611714032892974107}
   m_PrefabAsset: {fileID: 0}

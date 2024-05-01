@@ -16,7 +16,7 @@ TagManager:
   - UI
   - Suelo
   - Personaje
-  - 
+  - Tejado
   - 
   - 
   - 
@@ -64,4 +64,7 @@ TagManager:
     locked: 0
   - name: Objetos Delante
     uniqueID: 4170540279
+    locked: 0
+  - name: Tejado
+    uniqueID: 3182202379
     locked: 0

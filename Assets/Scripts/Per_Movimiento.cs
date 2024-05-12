@@ -7,20 +7,25 @@ public class Per_Movimiento : MonoBehaviour
 
     [SerializeField] private float velocidad;
 
+    public static Per_Movimiento instanciaJugador;
+
     private Rigidbody2D rig;
 
     private Animator anim;
 
-    private int vidaPersonaje = 6;
-    private int vidaMaxPersonaje = 6;
+    public int vidaPersonaje = 6;
+    public int vidaMaxPersonaje = 6;
 
     public static bool interactuando = false;
 
 
     [SerializeField] UIManager uiManager;
 
+
+
     private void Awake()
     {
+        instanciaJugador = this;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
     }
@@ -109,4 +114,22 @@ public class Per_Movimiento : MonoBehaviour
             }
         }
     }
+
+    public void DanoJugador(int cantidad)
+    {
+        //Debug.Log(recuperacion+";"+cantidad+"");
+
+            if (vidaPersonaje > 0)
+            {
+                vidaPersonaje -= cantidad;
+                uiManager.ActualizarVidaUI(vidaPersonaje);
+            }
+
+        if (vidaMaxPersonaje <= 0)
+        {
+            //muere
+        }
+        
+    }
+
 }

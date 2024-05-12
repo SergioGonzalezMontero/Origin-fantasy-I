@@ -5,7 +5,7 @@ public class Random_Mov : MonoBehaviour
 {
     public float velocidad = 4f;
     private Vector2 dirección;
-    //public Animator animator;
+    public Animator animator;
 
     float minX = -12.62f;
     float maxX = 3.95f;
@@ -23,7 +23,7 @@ public class Random_Mov : MonoBehaviour
         Vector2 movimiento = dirección * velocidad * Time.deltaTime;
         Vector2 nuevaPosición = (Vector2)transform.position + movimiento;
 
-        /*if (movimiento.x > 0f) // Movimiento hacia la derecha
+        if (movimiento.x > 0f) // Movimiento hacia la derecha
         {
             animator.SetBool("isMovingRight", true);
             animator.SetBool("isMovingLeft", false);
@@ -50,7 +50,7 @@ public class Random_Mov : MonoBehaviour
             animator.SetBool("isMovingLeft", false);
             animator.SetBool("isMovingUp", false);
             animator.SetBool("isMovingDown", true);
-        }*/
+        }
 
         if (nuevaPosición.x < minX || nuevaPosición.x > maxX || nuevaPosición.y < minY || nuevaPosición.y > maxY)
         {

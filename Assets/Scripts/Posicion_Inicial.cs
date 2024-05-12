@@ -8,6 +8,7 @@ public class Posicion_Inicial : MonoBehaviour
     public Transform Inicio1;
     public Transform Inicio2;
     public Transform Inicio3;
+    public bool ComienzoJuego = false;
 
     private void Start()
     {
@@ -23,7 +24,14 @@ public class Posicion_Inicial : MonoBehaviour
             case "Entrada":
                 if (SceneManager.GetActiveScene().name.ToString().Equals("Calle"))
                 {
-                    transform.position = Inicio2.position;
+                    if (ComienzoJuego)
+                    {
+                        transform.position = Inicio1.position;
+                    }
+                    else
+                    {
+                        transform.position = Inicio2.position;
+                    }
                 }
                 else if (SceneManager.GetActiveScene().name.ToString().Equals("Patio_Inferior"))
                 {

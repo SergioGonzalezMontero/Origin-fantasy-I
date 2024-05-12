@@ -10,11 +10,15 @@ public class Coche : MonoBehaviour
     private Vector3 resetPosition; // Posición de reinicio del coche
     public float timeToDisappear = 10f; // Tiempo indicado antes de que el coche desaparezca después de llegar al final
 
+    public Animator animator; // Referencia al componente Animator del coche
+    public string nombreAnimacion;
 
     void Start()
     {
         originalPosition = transform.position; // Almacenamos la posición original del coche
         resetPosition = originalPosition + (moveUpwards ? Vector3.up : Vector3.down) * resetDistance; // Calculamos la posición de reinicio del coche
+
+        animator.Play(nombreAnimacion);
     }
 
     void Update()

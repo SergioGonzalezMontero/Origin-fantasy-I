@@ -12,10 +12,15 @@ public class Coche_Freno : MonoBehaviour
     private float brakeStartDistance; // Distancia desde el destino donde comienza el frenado
     public float tiempoHastaAparecer = 10f;
 
+    public Animator animator; // Referencia al componente Animator del coche
+    public string nombreAnimacion;
+
     void Start()
     {
         originalPosition = transform.position; // Almacenamos la posición original del coche
         brakeStartDistance = destination - brakeDistance; // Calculamos la distancia desde el destino donde comienza el frenado
+
+        animator.Play(nombreAnimacion);
     }
 
     void Update()

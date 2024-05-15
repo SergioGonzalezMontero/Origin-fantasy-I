@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 67106115}
   - component: {fileID: 67106114}
   - component: {fileID: 67106113}
+  - component: {fileID: 67106117}
   m_Layer: 0
   m_Name: Coche Freno (1)
   m_TagString: Untagged
@@ -208,6 +209,8 @@ MonoBehaviour:
   brakeDistance: 15
   moveUpwards: 1
   tiempoHastaAparecer: 10
+  animator: {fileID: 67106114}
+  nombreAnimacion: Color2_Arriba
 --- !u!95 &67106114
 Animator:
   serializedVersion: 5
@@ -296,6 +299,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &67106117
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67106112}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.02853012}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 5.0097656}
+    newSize: {x: 2, y: 5.0097656}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4.588722}
+  m_EdgeRadius: 0
 --- !u!1 &224343287
 GameObject:
   m_ObjectHideFlags: 0
@@ -18695,7 +18743,6 @@ GameObject:
   - component: {fileID: 364893129}
   - component: {fileID: 364893128}
   - component: {fileID: 364893127}
-  - component: {fileID: 364893126}
   m_Layer: 0
   m_Name: Semaforo
   m_TagString: Untagged
@@ -18703,20 +18750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &364893126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364893125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc0d9bb907514f4489fef639c1a302fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 364893127}
-  delayInSeconds: 10
 --- !u!95 &364893127
 Animator:
   serializedVersion: 5
@@ -18776,8 +18809,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -124427017
-  m_SortingLayer: 6
+  m_SortingLayerID: -1112764917
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -323683018, guid: 9fb76e327c739f74f9900d92de336332, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19792,7 +19825,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 35
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19832,7 +19865,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19882,7 +19915,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 33
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19952,7 +19985,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 32
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19962,7 +19995,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 31
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -20300,6 +20333,28 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 1e0d4f775d44e1a47aec6ae06c907318, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 1202e059bd964f34fa1197fae0356752, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 4
     m_Data: {fileID: -472674973, guid: 327442e4fe8700c4cbcc515d7e3a0f26, type: 3}
@@ -20309,26 +20364,26 @@ Tilemap:
     m_Data: {fileID: 647137805, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 280839955, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1608077694, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: -1524211664, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1856628784, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1193637652, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -1324210085, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -627688078, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 8
     m_Data: {fileID: 1871756486, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 1380128996, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -2007462358, guid: 327442e4fe8700c4cbcc515d7e3a0f26, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1164957963, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: -387329079, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
   - m_RefCount: 4
@@ -20351,6 +20406,28 @@ Tilemap:
     m_Data: {fileID: -854123703, guid: 327442e4fe8700c4cbcc515d7e3a0f26, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 317944545, guid: 76874bf9bbe9ef34f8416483977f0a82, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -627688078, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1193637652, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1608077694, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1856628784, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1164957963, guid: caf2509c17376a646964d2d0a9ab54a1, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 93
     m_Data:
@@ -20395,7 +20472,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: -75, z: 0}
-  m_Size: {x: 42, y: 94, z: 1}
+  m_Size: {x: 42, y: 96, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -20427,6 +20504,7 @@ GameObject:
   - component: {fileID: 668341781}
   - component: {fileID: 668341780}
   - component: {fileID: 668341779}
+  - component: {fileID: 668341783}
   m_Layer: 0
   m_Name: Coche Freno (2)
   m_TagString: Untagged
@@ -20451,6 +20529,8 @@ MonoBehaviour:
   brakeDistance: 15
   moveUpwards: 1
   tiempoHastaAparecer: 10
+  animator: {fileID: 668341780}
+  nombreAnimacion: Color1_Arriba
 --- !u!95 &668341780
 Animator:
   serializedVersion: 5
@@ -20539,6 +20619,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &668341783
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668341778}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.058280945}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 5.0097656}
+    newSize: {x: 2, y: 5.0097656}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4.5668335}
+  m_EdgeRadius: 0
 --- !u!1 &757051957
 GameObject:
   m_ObjectHideFlags: 0
@@ -20635,6 +20760,7 @@ GameObject:
   - component: {fileID: 828202725}
   - component: {fileID: 828202724}
   - component: {fileID: 828202723}
+  - component: {fileID: 828202727}
   m_Layer: 0
   m_Name: Coche Freno (3)
   m_TagString: Untagged
@@ -20659,6 +20785,8 @@ MonoBehaviour:
   brakeDistance: 15
   moveUpwards: 1
   tiempoHastaAparecer: 10
+  animator: {fileID: 828202724}
+  nombreAnimacion: Color3_Arriba
 --- !u!95 &828202724
 Animator:
   serializedVersion: 5
@@ -20747,6 +20875,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &828202727
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828202722}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.022655487}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 5.0097656}
+    newSize: {x: 2, y: 5.0097656}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4.647209}
+  m_EdgeRadius: 0
 --- !u!1 &1144133225
 GameObject:
   m_ObjectHideFlags: 0
@@ -28993,6 +29166,7 @@ GameObject:
   - component: {fileID: 1404242044}
   - component: {fileID: 1404242043}
   - component: {fileID: 1404242042}
+  - component: {fileID: 1404242046}
   m_Layer: 0
   m_Name: Coche Freno
   m_TagString: Untagged
@@ -29017,6 +29191,8 @@ MonoBehaviour:
   brakeDistance: 15
   moveUpwards: 1
   tiempoHastaAparecer: 10
+  animator: {fileID: 1404242043}
+  nombreAnimacion: Color4_Arriba
 --- !u!95 &1404242043
 Animator:
   serializedVersion: 5
@@ -29105,6 +29281,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1404242046
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404242041}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.07512283}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 5.0097656}
+    newSize: {x: 2, y: 5.0097656}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 4.64489}
+  m_EdgeRadius: 0
 --- !u!1 &1537439942
 GameObject:
   m_ObjectHideFlags: 0
@@ -90361,7 +90582,7 @@ PrefabInstance:
       objectReference: {fileID: 514126837}
     - target: {fileID: 4386651811440491562, guid: dfd011232ea9a0c48a97f49327268029, type: 3}
       propertyPath: ComienzoJuego
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -90694,6 +90915,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1937677947605731367, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7947464
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937677947605731367, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.8514977
+      objectReference: {fileID: 0}
     - target: {fileID: 4440791872987630100, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.25

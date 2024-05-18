@@ -18,6 +18,11 @@ public class S_DialogueSpeaker : MonoBehaviour
         indexDeConversaciones = 0;
         dialLocalIn = 0;
 
+
+        ///////////
+        ////////////
+        ///////////
+        ///solo para pruebas, despues borrar
         foreach(var conv in conversacionesDisponibles)
         {
             conv.finalizado = false;
@@ -30,9 +35,24 @@ public class S_DialogueSpeaker : MonoBehaviour
                 }
             }
         }
-
+        ///solo para pruebas, despues borrar
+         ///////////
+        ////////////
+        ///////////
 
     }
+    /// 
+    /// /////////////////////////////////////////////
+    /// /////////////////////////////////////////////
+    /// /////////////////////////////////////////////
+    /////////////////////////////////////////////
+    //IMPORTANTE PONERLE EL TAG PLAYER!!!!!!!!!!
+
+    /////////////////////////////////////////////
+    ////////////////////////////////////////////////
+    ////////////////////////////////////////////////
+    ////////////////////////////////////////////////
+    ////////////////////////////////////////////////
 
     void OnTriggerStay(Collider other)
     {
@@ -51,13 +71,61 @@ public class S_DialogueSpeaker : MonoBehaviour
     {
         if(indexDeConversaciones <= conversacionesDisponibles.Count - 1)
         {
-
+            if (conversacionesDisponibles[indexDeConversaciones].desbloqueada)
+            {
+                if (conversacionesDisponibles[indexDeConversaciones].finalizado)
+                {
+                    if (ActualizarConversacion())
+                    {
+                        S_DialogoManager.instance.MostrarUI(true);
+                        S_DialogoManager.instance.SetConversacion(conversacionesDisponibles[indexDeConversaciones], this);
+                    }
+                    S_DialogoManager.instance.SetConversacion(conversacionesDisponibles[indexDeConversaciones],this);
+                    return;
+                }
+                S_DialogoManager.instance.MostrarUI(true);
+                S_DialogoManager.instance.SetConversacion(conversacionesDisponibles[indexDeConversaciones], this);
+            }
+            else
+            {
+                Debug.LogWarning("Conversacion Bloqueada");
+                S_DialogoManager.instance.MostrarUI(false);
+            }
+        }
+        else
+        {
+            //Ya se usaron todas las conversaciones disponibles
+            print("Fin del dialogo");
+            S_DialogoManager.instance.MostrarUI(false);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+     bool ActualizarConversacion()
     {
-        
+        if (!conversacionesDisponibles[indexDeConversaciones].reUsar)
+        {
+            if(indexDeConversaciones < conversacionesDisponibles.Count - 1)
+            {
+                indexDeConversaciones++;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return true;
+        }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            S_DialogoManager.instance.MostrarUI(false);
+        }
+    }
+
 }

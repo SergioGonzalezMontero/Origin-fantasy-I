@@ -8,13 +8,13 @@ public class Posicion_Inicial : MonoBehaviour
     public Transform Inicio1;
     public Transform Inicio2;
     public Transform Inicio3;
-    public bool ComienzoJuego = false;
+    public static bool ComienzoJuego = true;
 
     private void Start()
     {
         string escenaAnterior = PlayerPrefs.GetString("EscenaAnterior");
 
-        // Determinar la posición inicial del jugador según la escena anterior
+        // Determinar la posicion inicial del jugador segun la escena anterior
         Debug.Log(escenaAnterior);
         switch (escenaAnterior)
         {
@@ -24,9 +24,11 @@ public class Posicion_Inicial : MonoBehaviour
             case "Entrada":
                 if (SceneManager.GetActiveScene().name.ToString().Equals("Calle"))
                 {
+                    Debug.Log(ComienzoJuego);
                     if (ComienzoJuego)
                     {
                         transform.position = Inicio1.position;
+                        ComienzoJuego = false;
                     }
                     else
                     {
@@ -85,6 +87,5 @@ public class Posicion_Inicial : MonoBehaviour
                 }
                 break;
         }
-        // Añadir más condiciones según sea necesario
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 237d9e8654d0fb9488043b36750eae04, type: 3}
-  m_Name: Personaje
+  m_Name: Pers_Javier_Mazon
   m_EditorClassIdentifier: 
   nombre: Javi
   imagen: {fileID: 21300000, guid: 1a10da6935986c0428ab2e1a8a00ad5e, type: 3}

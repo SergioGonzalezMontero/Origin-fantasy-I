@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class S_DialogueSpeaker : MonoBehaviour
 {
-
+    static int contador = 0;
     public List<Conversacion> conversacionesDisponibles = new List<Conversacion>();
 
     [SerializeField]
@@ -23,19 +23,19 @@ public class S_DialogueSpeaker : MonoBehaviour
         ////////////
         ///////////
         ///solo para pruebas, despues borrar
-        foreach(var conv in conversacionesDisponibles)
-        {
-            conv.finalizado = false;
-            var preg = conv.pregunta;
-            if(preg != null)
-            {
-                foreach (var opcion in preg.opciones)
-                {
-                    opcion.convResultante.finalizado = false;
-                }
-            }
-        }
-        ///solo para pruebas, despues borrar
+        //foreach(var conv in conversacionesDisponibles)
+        //{
+        //    conv.finalizado = false;
+        //    var preg = conv.pregunta;
+        //    if(preg != null)
+        //    {
+        //        foreach (var opcion in preg.opciones)
+        //        {
+        //            opcion.convResultante.finalizado = false;
+        //        }
+        //    }
+        //}
+       // ///solo para pruebas, despues borrar
          ///////////
         ////////////
         ///////////
@@ -54,31 +54,61 @@ public class S_DialogueSpeaker : MonoBehaviour
     ////////////////////////////////////////////////
     ////////////////////////////////////////////////
 
-    void OnTriggerStay(Collider other)
+    private bool playerInTrigger = false;
+    public void Update()
     {
-        if (other.CompareTag("Player")&& Input.GetKeyDown(KeyCode.E))
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("Pulso E");
             Conversar();
         }
 
-        if(other.CompareTag("Player")&& Input.GetKeyDown(KeyCode.Z))
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.Z))
         {
+            Debug.Log("Pulso Z");
             S_DialogoManager.instance.CambiarEstadoDeReUsable(conversacionesDisponibles[indexDeConversaciones], !conversacionesDisponibles[indexDeConversaciones].reUsar);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInTrigger = false;
+
+            S_DialogoManager.instance.MostrarUI(false);
+
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInTrigger = true;
+            
         }
     }
 
     public void Conversar()
     {
-        if(indexDeConversaciones <= conversacionesDisponibles.Count - 1)
+        Debug.Log("entro en conversar 0");
+        if (indexDeConversaciones <= conversacionesDisponibles.Count - 1)
         {
+            Debug.Log("entro en conversar 1");
             if (conversacionesDisponibles[indexDeConversaciones].desbloqueada)
             {
+                Debug.Log("entro en conversar 2");
                 if (conversacionesDisponibles[indexDeConversaciones].finalizado)
                 {
+                    Debug.Log("entro en conversar 3");
                     if (ActualizarConversacion())
                     {
+                        Debug.Log("entro en actualizar conversacion");
                         S_DialogoManager.instance.MostrarUI(true);
                         S_DialogoManager.instance.SetConversacion(conversacionesDisponibles[indexDeConversaciones], this);
+                        Debug.Log(conversacionesDisponibles[indexDeConversaciones]+"Conversaciones");
+                        
                     }
                     S_DialogoManager.instance.SetConversacion(conversacionesDisponibles[indexDeConversaciones],this);
                     return;
@@ -94,6 +124,7 @@ public class S_DialogueSpeaker : MonoBehaviour
         }
         else
         {
+            Debug.Log("Fin del dialogo");
             //Ya se usaron todas las conversaciones disponibles
             print("Fin del dialogo");
             S_DialogoManager.instance.MostrarUI(false);
@@ -120,12 +151,7 @@ public class S_DialogueSpeaker : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            S_DialogoManager.instance.MostrarUI(false);
-        }
-    }
+   
+   
 
 }

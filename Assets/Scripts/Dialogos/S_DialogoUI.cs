@@ -47,10 +47,10 @@ public class S_DialogoUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if(Input.GetKeyDown(KeyCode.Q))
-       // {
-       //     ActualizarTextos(1);
-       // }
+      //  if(Input.GetKeyDown(KeyCode.Q))
+      //  {
+      //      ActualizarTextos(1);
+      //  }
     }
 
     public void ActualizarTextos(int comportamiento)

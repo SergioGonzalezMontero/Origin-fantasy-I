@@ -1,57 +1,45 @@
+using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 public class BalonFutbol : MonoBehaviour
 {
-    public float fuerzaDisparo = 5000f; // Fuerza del disparo
-    public float distanciaRecorrido = 5f; // Distancia que el balón recorrerá al ser chocado
-    private Rigidbody2D rb;
-    private float minX = -8f;
-    private float maxX = 2.5f;
-    private float minY = -21f;
-    private float maxY = -19f;
+    public float velocidadMovimiento = 4f;
+    public float velocidadRotacion = 100f; // Velocidad de rotación
+
+    private Vector2 dirección;
+    private float minX = -12.62f;
+    private float maxX = 3.95f;
+    private float minY = -23.00f; // Reduciendo minY para hacer el rectángulo más delgado
+    private float maxY = -17.30f;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
-    
+        dirección = ObtenerNuevaDirección();
     }
 
     void Update()
     {
-        Vector2 posición = transform.position;
-        posición.x = Mathf.Clamp(posición.x, minX, maxX);
-        posición.y = Mathf.Clamp(posición.y, minY, maxY);
-        transform.position = posición;
-    }
+        // Movimiento
+        Vector2 movimiento = dirección * velocidadMovimiento * Time.deltaTime;
+        Vector2 nuevaPosición = (Vector2)transform.position + movimiento;
 
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("NPC")) // Verificar si el balón no ha sido chocado y si colisionó con un NPC
+        if (nuevaPosición.x < minX || nuevaPosición.x > maxX || nuevaPosición.y < minY || nuevaPosición.y > maxY)
         {
-            
-            Vector2 direcciónEmpuje = (other.transform.position - transform.position).normalized;
+            // Si la nueva posición está fuera de los límites, obtenemos una nueva dirección
+            dirección = ObtenerNuevaDirección();
+        }
+        else
+        {
+            // Si la nueva posición está dentro de los límites, movemos el objeto
+            transform.Translate(movimiento, Space.World);
 
-            // Calcular el punto final del recorrido
-            Vector2 puntoFinal = rb.position - direcciónEmpuje * distanciaRecorrido;
-
-            // Limitar el punto final dentro de los límites establecidos
-            StartCoroutine(RecorrerDistancia(puntoFinal)); // Iniciar la coroutine para recorrer la distancia
+       
         }
     }
 
-    IEnumerator RecorrerDistancia(Vector2 puntoFinal)
+    Vector2 ObtenerNuevaDirección()
     {
-        float distancia = Vector2.Distance(rb.position, puntoFinal); // Calcular la distancia restante
-        while (distancia > 0.1f) // Mientras la distancia restante sea mayor que un pequeño umbral
-        {
-            // Mover gradualmente el balón hacia el punto final
-            rb.position = Vector2.MoveTowards(rb.position, puntoFinal, Time.deltaTime);
-            distancia = Vector2.Distance(rb.position, puntoFinal); // Recalcular la distancia restante
-            yield return null;
-        }
-        // Reiniciar la variable chocado para permitir que el balón sea chocado nuevamente
+        Vector2 nuevaDirección = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        return nuevaDirección;
     }
 }

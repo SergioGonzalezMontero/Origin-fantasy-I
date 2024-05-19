@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+   
     private int totalGlobos;
     [SerializeField] private Text textoGlobos;
     [SerializeField] public List<Image> listaCorazones;
     [SerializeField] public Sprite corazonLleno, corazonMitad, corazonVacio;
-
-
 
     void Start()
     {

@@ -51,6 +51,7 @@ public class S_DialogoManager : MonoBehaviour
 
     public void MostrarUI(bool mostrar)
     {
+        Debug.Log("UIEntra");
         dialUI.gameObject.SetActive(mostrar);
         if (!mostrar)
         {
@@ -92,6 +93,7 @@ public class S_DialogoManager : MonoBehaviour
     {
         if(speaker != null)
         {
+            Debug.Log("New Speaker");
             speakerActual = speaker;
         }
         else
@@ -101,6 +103,12 @@ public class S_DialogoManager : MonoBehaviour
             dialUI.ActualizarTextos(0);
         }
         if(conv.finalizado && !conv.reUsar)
+        {
+            dialUI.conversacion = conv;
+            dialUI.localIn = speakerActual.dialLocalIn;
+            dialUI.ActualizarTextos(0);
+        }
+        else if (!conv.finalizado)
         {
             dialUI.conversacion = conv;
             dialUI.localIn = speakerActual.dialLocalIn;
@@ -121,6 +129,7 @@ public class S_DialogoManager : MonoBehaviour
     {
         conv.desbloqueada = desbloquear;
     }
+
 
     // Update is called once per frame
     void Update()

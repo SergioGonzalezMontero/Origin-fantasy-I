@@ -12,6 +12,9 @@ public class S_DialogueSpeaker : MonoBehaviour
 
     public int dialLocalIn = 0; //recorre cada dialogo de la conversacion actual
 
+    public bool Activador;
+    public Conversacion speakerActivador;
+
     void Start()
     {
 
@@ -92,13 +95,10 @@ public class S_DialogueSpeaker : MonoBehaviour
 
     public void Conversar()
     {
-        Debug.Log("entro en conversar 0");
-        if (indexDeConversaciones <= conversacionesDisponibles.Count - 1)
+        if (indexDeConversaciones <= conversacionesDisponibles.Count)
         {
-            Debug.Log("entro en conversar 1");
             if (conversacionesDisponibles[indexDeConversaciones].desbloqueada)
             {
-                Debug.Log("entro en conversar 2");
                 if (conversacionesDisponibles[indexDeConversaciones].finalizado)
                 {
                     Debug.Log("entro en conversar 3");
@@ -115,6 +115,8 @@ public class S_DialogueSpeaker : MonoBehaviour
                 }
                 S_DialogoManager.instance.MostrarUI(true);
                 S_DialogoManager.instance.SetConversacion(conversacionesDisponibles[indexDeConversaciones], this);
+                if(Activador)
+                    speakerActivador.desbloqueada = true;
             }
             else
             {

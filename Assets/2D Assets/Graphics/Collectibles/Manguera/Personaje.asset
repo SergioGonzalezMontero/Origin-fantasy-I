@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a2777adee82bf4bae9d17c70e47922, type: 3}
-  m_Name: Pregunta
+  m_Script: {fileID: 11500000, guid: 237d9e8654d0fb9488043b36750eae04, type: 3}
+  m_Name: Personaje
   m_EditorClassIdentifier: 
-  pregunta: "\xBFQu\xE9 pas\xF3?"
-  opciones:
-  - opcion: Nada
-    convResultante: {fileID: 0}
-  - opcion: Algo
-    convResultante: {fileID: 0}
+  nombre: Obj. Clave
+  imagen: {fileID: 21300000, guid: 27d6356b7f73e4c4a8844e339d102149, type: 3}

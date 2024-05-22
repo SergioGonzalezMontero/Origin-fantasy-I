@@ -58,10 +58,12 @@ public class S_DialogoUI : MonoBehaviour
         convContainer.SetActive(true);
         pregContainer.SetActive(false);
 
+        Debug.Log("Nuevos Textos");
         switch(comportamiento)
         {
             //Retroceder el texto
             case -1:
+                convText.text = "";
                 if (localIn > 0)
                 {
                     print("Dialogo anterior");
@@ -70,7 +72,6 @@ public class S_DialogoUI : MonoBehaviour
                     nombre.text = conversacion.dialogos[localIn].personaje.nombre;
                     StopAllCoroutines();
                     StartCoroutine(EscribirTexto());
-                    //convText.text = conversacion.dialogos[localIn].dialogo;
                     speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
 
                     if(conversacion.dialogos[localIn].sonido!= null)
@@ -90,12 +91,12 @@ public class S_DialogoUI : MonoBehaviour
             //No avanzar el texto
 
             case 0:
+                convText.text = "";
                 print("Dialogo actualizado");
 
                 nombre.text = conversacion.dialogos[localIn].personaje.nombre;
                 StopAllCoroutines();
                 StartCoroutine(EscribirTexto());
-                //convText.text = conversacion.dialogos[localIn].dialogo;
                 speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
 
                 if (conversacion.dialogos[localIn].sonido != null)
@@ -118,7 +119,7 @@ public class S_DialogoUI : MonoBehaviour
                 break;
 
             case 1:
-
+                convText.text = "";
                 if (localIn < conversacion.dialogos.Length - 1)
                 {
                     print("Dialogo Siguiente");
@@ -126,7 +127,6 @@ public class S_DialogoUI : MonoBehaviour
                     nombre.text = conversacion.dialogos[localIn].personaje.nombre;
                     StopAllCoroutines();
                     StartCoroutine(EscribirTexto());
-                    // convText.text = conversacion.dialogos[localIn].dialogo;
                     speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
 
                     if (conversacion.dialogos[localIn].sonido != null)
@@ -179,12 +179,15 @@ public class S_DialogoUI : MonoBehaviour
 
     IEnumerator EscribirTexto()
     {
-        convText.maxVisibleCharacters = 0;
-        convText.text = conversacion.dialogos[localIn].dialogo;
+        string temp = conversacion.dialogos[localIn].dialogo;
+        convText.text = "";
+        //convText.maxVisibleCharacters = 0;
+        Debug.Log("Nuevo Dialogo: " + conversacion.dialogos[localIn].dialogo);
         convText.richText = true;
-
-        foreach(char letra in conversacion.dialogos[localIn].dialogo.ToCharArray())
+        
+        foreach(char letra in temp.ToCharArray())
         {
+            Debug.Log("New Char");
             convText.text += letra;
             yield return new WaitForSeconds(1f / textSpeed);
                     

@@ -1,31 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Per_Movimiento : MonoBehaviour
 {
 
     [SerializeField] private float velocidad;
 
-    public static Per_Movimiento instanciaJugador;
-
     private Rigidbody2D rig;
 
     private Animator anim;
+
+    public SpriteRenderer imgSprite;
 
     public int vidaPersonaje = 6;
     public int vidaMaxPersonaje = 6;
 
     public static bool interactuando = false;
 
+    public bool quemado = false;
 
-    [SerializeField] UIManager uiManager;
+
 
 
 
     private void Awake()
     {
-        instanciaJugador = this;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
     }
@@ -103,14 +104,14 @@ public class Per_Movimiento : MonoBehaviour
                 {
                     vidaPersonaje = vidaMaxPersonaje;
                 }
-                uiManager.ActualizarVidaUI(vidaPersonaje);
+                LevelManager.instance.managerUI.ActualizarVidaUI(vidaPersonaje);
             }
         }
         else
         {
             if(vidaPersonaje > 0) {
                 vidaPersonaje -= cantidad;
-                uiManager.ActualizarVidaUI(vidaPersonaje);
+                LevelManager.instance.managerUI.ActualizarVidaUI(vidaPersonaje);
             }
         }
     }
@@ -118,18 +119,25 @@ public class Per_Movimiento : MonoBehaviour
     public void DanoJugador(int cantidad)
     {
         //Debug.Log(recuperacion+";"+cantidad+"");
-
+        StartCoroutine(damage());
             if (vidaPersonaje > 0)
             {
                 vidaPersonaje -= cantidad;
-                uiManager.ActualizarVidaUI(vidaPersonaje);
+                LevelManager.instance.managerUI.ActualizarVidaUI(vidaPersonaje);
             }
 
-        if (vidaMaxPersonaje <= 0)
+        if (vidaPersonaje <= 0)
         {
-            //muere
+            GameManager.Instance.GameOver();
         }
-        
+        Debug.Log("Player life change: " + vidaPersonaje);
+    }
+
+    IEnumerator damage()
+    {
+        imgSprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        imgSprite.color = Color.white;
     }
 
 }

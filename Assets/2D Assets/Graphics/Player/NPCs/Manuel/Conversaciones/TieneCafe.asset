@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f5e607a205c23c4ba2faaf3ae5e0290, type: 3}
-  m_Name: Manguera_Conseguida
+  m_Name: TieneCafe
   m_EditorClassIdentifier: 
-  desbloqueada: 1
+  desbloqueada: 0
   finalizado: 0
   reUsar: 0
   dialogos:
-  - personaje: {fileID: 11400000, guid: 8a2e73af70b36ea4588181f3a34a7b35, type: 2}
+  - personaje: {fileID: 11400000, guid: 4706a3219ff507043ac9b724cd92673a, type: 2}
     sonido: {fileID: 0}
-    dialogo: Has conseguido la manguera.
+    dialogo: Oh muchas gracias.
+  - personaje: {fileID: 11400000, guid: 4706a3219ff507043ac9b724cd92673a, type: 2}
+    sonido: {fileID: 0}
+    dialogo: "\xA1Puedes pasar!"
   pregunta: {fileID: 0}

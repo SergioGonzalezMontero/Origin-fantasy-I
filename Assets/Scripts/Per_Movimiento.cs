@@ -14,7 +14,6 @@ public class Per_Movimiento : MonoBehaviour
 
     public SpriteRenderer imgSprite;
 
-    public int vidaPersonaje = 6;
     public int vidaMaxPersonaje = 6;
 
     public static bool interactuando = false;
@@ -97,21 +96,21 @@ public class Per_Movimiento : MonoBehaviour
 
         if (recuperacion)
         {
-            if (vidaPersonaje < vidaMaxPersonaje)
+            if (GameManager.Instance.vidas < vidaMaxPersonaje)
             {
-                vidaPersonaje += cantidad;
-                if(vidaPersonaje > vidaMaxPersonaje)
+                GameManager.Instance.vidas += cantidad;
+                if(GameManager.Instance.vidas > vidaMaxPersonaje)
                 {
-                    vidaPersonaje = vidaMaxPersonaje;
+                    GameManager.Instance.vidas = vidaMaxPersonaje;
                 }
-                LevelManager.instance.managerUI.ActualizarVidaUI(vidaPersonaje);
+                LevelManager.instance.managerUI.ActualizarVidaUI(GameManager.Instance.vidas);
             }
         }
         else
         {
-            if(vidaPersonaje > 0) {
-                vidaPersonaje -= cantidad;
-                LevelManager.instance.managerUI.ActualizarVidaUI(vidaPersonaje);
+            if(GameManager.Instance.vidas > 0) {
+                GameManager.Instance.vidas -= cantidad;
+                LevelManager.instance.managerUI.ActualizarVidaUI(GameManager.Instance.vidas);
             }
         }
     }
@@ -120,17 +119,17 @@ public class Per_Movimiento : MonoBehaviour
     {
         //Debug.Log(recuperacion+";"+cantidad+"");
         StartCoroutine(damage());
-            if (vidaPersonaje > 0)
+            if (GameManager.Instance.vidas > 0)
             {
-                vidaPersonaje -= cantidad;
-                LevelManager.instance.managerUI.ActualizarVidaUI(vidaPersonaje);
+            GameManager.Instance.vidas -= cantidad;
+                LevelManager.instance.managerUI.ActualizarVidaUI(GameManager.Instance.vidas);
             }
 
-        if (vidaPersonaje <= 0)
+        if (GameManager.Instance.vidas <= 0)
         {
             GameManager.Instance.GameOver();
         }
-        Debug.Log("Player life change: " + vidaPersonaje);
+        Debug.Log("Player life change: " + GameManager.Instance.vidas);
     }
 
     IEnumerator damage()

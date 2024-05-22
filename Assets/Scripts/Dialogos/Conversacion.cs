@@ -25,4 +25,6 @@ public class Conversacion : ScriptableObject
 
     public Pregunta pregunta;
 
+    public bool Evento;
+    public string EventCode;
 }

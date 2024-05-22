@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public int vidas = 6;
 
+    public bool[] niveles;
+
     private void Awake()
     {
         if(Instance == null)
@@ -23,4 +25,5 @@ public class GameManager : MonoBehaviour
         vidas = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    
 }

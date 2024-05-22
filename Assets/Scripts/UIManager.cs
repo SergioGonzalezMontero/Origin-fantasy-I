@@ -10,10 +10,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text textoGlobos;
     [SerializeField] public List<Image> listaCorazones;
     [SerializeField] public Sprite corazonLleno, corazonMitad, corazonVacio;
-
+    public GameObject transicion;
     void Start()
     {
         Globo.sumaGlobo += SumarGlobos;
+        if(transicion != null)
+            transicion.SetActive(false);
+        ActualizarVidaUI(GameManager.Instance.vidas);
     }
 
     private void SumarGlobos(int globo)
@@ -61,6 +64,15 @@ public class UIManager : MonoBehaviour
                 listaCorazones[1].sprite = corazonLleno;
                 listaCorazones[2].sprite = corazonLleno;
                 break;
+        }
+    }
+    public IEnumerator nuevaTransicion()
+    {
+        if (transicion != null)
+        {
+            transicion.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            transicion.SetActive(false);
         }
     }
 }

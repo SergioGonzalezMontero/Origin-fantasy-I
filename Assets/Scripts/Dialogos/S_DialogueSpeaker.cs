@@ -8,7 +8,7 @@ public class S_DialogueSpeaker : MonoBehaviour
     public List<Conversacion> conversacionesDisponibles = new List<Conversacion>();
 
     [SerializeField]
-    private int indexDeConversaciones = 0; //recorre cada conversacion dentro de la lsita de conversacionesDisponibles
+    public int indexDeConversaciones = 0; //recorre cada conversacion dentro de la lsita de conversacionesDisponibles
 
     public int dialLocalIn = 0; //recorre cada dialogo de la conversacion actual
 
@@ -99,9 +99,9 @@ public class S_DialogueSpeaker : MonoBehaviour
         {
             if (conversacionesDisponibles[indexDeConversaciones].desbloqueada)
             {
+                Debug.Log("Entro: " + conversacionesDisponibles[indexDeConversaciones].desbloqueada + "Index: " + indexDeConversaciones);
                 if (conversacionesDisponibles[indexDeConversaciones].finalizado)
                 {
-                    Debug.Log("entro en conversar 3");
                     if (ActualizarConversacion())
                     {
                         Debug.Log("entro en actualizar conversacion");

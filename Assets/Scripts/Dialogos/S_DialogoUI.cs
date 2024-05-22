@@ -152,7 +152,11 @@ public class S_DialogoUI : MonoBehaviour
                     localIn = 0;
                     S_DialogoManager.speakerActual.dialLocalIn = 0;
                     conversacion.finalizado = true;
+                    if(S_DialogoManager.speakerActual.indexDeConversaciones < S_DialogoManager.speakerActual.conversacionesDisponibles.Count - 1)
+                        S_DialogoManager.speakerActual.indexDeConversaciones += 1;
 
+                    if (conversacion.Evento)
+                        LevelManager.instance.newEvent(conversacion.EventCode);
                     if (conversacion.pregunta != null)
                     {
                         convContainer.SetActive(false);
@@ -187,7 +191,6 @@ public class S_DialogoUI : MonoBehaviour
         
         foreach(char letra in temp.ToCharArray())
         {
-            Debug.Log("New Char");
             convText.text += letra;
             yield return new WaitForSeconds(1f / textSpeed);
                     

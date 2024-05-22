@@ -9,6 +9,7 @@ public class Contr_ZonaDialogo : MonoBehaviour
     public void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

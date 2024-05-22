@@ -14,7 +14,8 @@ public class Cambio_Escena : MonoBehaviour
 
             PlayerPrefs.SetString("EscenaAnterior", SceneManager.GetActiveScene().name);
             PlayerPrefs.Save();
-
+            if(LevelManager.instance.nivelNum < num_Escena)
+                GameManager.Instance.niveles[LevelManager.instance.nivelNum] = true;
             switch (SceneManager.GetActiveScene().name.ToString())
             {
                 case "Calle":

@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 7832027492274061250}
   - component: {fileID: 680577474265235477}
   m_Layer: 0
-  m_Name: Javier_Manzon_img
+  m_Name: Manuel_img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,7 @@ SpriteRenderer:
   m_SortingLayerID: 600207961
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 344881698, guid: c0d20ec928114f5449cb7c88a8235ca8, type: 3}
+  m_Sprite: {fileID: 1373137835, guid: 3dade438073b21d48818f9b457bd2461, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

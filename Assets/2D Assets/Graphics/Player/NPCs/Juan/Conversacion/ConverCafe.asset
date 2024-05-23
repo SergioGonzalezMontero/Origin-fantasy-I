@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ConverCafe
   m_EditorClassIdentifier: 
   desbloqueada: 1
-  finalizado: 1
+  finalizado: 0
   reUsar: 1
   dialogos:
   - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
@@ -29,3 +29,5 @@ MonoBehaviour:
     sonido: {fileID: 0}
     dialogo: Claro, a mi me sobra un poco.
   pregunta: {fileID: 11400000, guid: d74f267f02406514bac1fd0646746469, type: 2}
+  Evento: 0
+  EventCode: 

@@ -7,6 +7,10 @@ public class EventManager : MonoBehaviour
     //Evento1
     public GameObject manguera;
     public GameObject[] Autos;
+
+    //Evento2
+    public GameObject manuel_pasar;
+
     public void newEvent(string eventCode)
     {
         Debug.Log("NewEvent: " + eventCode);
@@ -31,6 +35,13 @@ public class EventManager : MonoBehaviour
                     StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
                 }
                 break;
+
+            case "manuel_pasar":
+                if(manuel_pasar!= null)
+                {
+                    manuel_pasar.SetActive(false);
+                }
+                break;
         }
     }
     public void setLevel(int id)
@@ -46,6 +57,10 @@ public class EventManager : MonoBehaviour
                 }
                 manguera.SetActive(false);
                 break;
+            case 2:
+                manuel_pasar.SetActive(false);
+                break;
+
         }
     }
 }

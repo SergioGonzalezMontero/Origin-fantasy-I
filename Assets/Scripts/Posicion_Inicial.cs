@@ -48,6 +48,7 @@ public class Posicion_Inicial : MonoBehaviour
                 else if (SceneManager.GetActiveScene().name.ToString().Equals("Patio_Superior"))
                 {
                     transform.position = Inicio1.position;
+                    
                 }
                 break;
             case "Patio_Superior":

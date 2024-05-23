@@ -173,7 +173,7 @@ MonoBehaviour:
   indexDeConversaciones: 0
   dialLocalIn: 0
   Activador: 1
-  speakerActivador: {fileID: 11400000, guid: aed6bb2164310be478d9a599ffa45aff, type: 2}
+  speakerActivador: {fileID: 11400000, guid: 3cccd24a68f1ab6419b851c2915eca2d, type: 2}
 --- !u!61 &168015661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -273,7 +273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675410218505846189, guid: 21d6f940d04f9a94fa00597f52a89667, type: 3}
       propertyPath: nivelNum
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4675410218505846189, guid: 21d6f940d04f9a94fa00597f52a89667, type: 3}
       propertyPath: managerUI
@@ -1257,6 +1257,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
       propertyPath: manguera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
+      propertyPath: manuel_pasar
       value: 
       objectReference: {fileID: 1548114183}
     - target: {fileID: 8191702010431991949, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
@@ -4652,7 +4656,7 @@ GameObject:
   - component: {fileID: 1548114184}
   - component: {fileID: 1548114185}
   m_Layer: 0
-  m_Name: Evita_paso
+  m_Name: manuel_pasar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30116,6 +30120,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.66
       objectReference: {fileID: 0}
+    - target: {fileID: 3820274476192020298, guid: 361c62a3be2ec264d91afd61c77d4f65, type: 3}
+      propertyPath: speakerActivador
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cccd24a68f1ab6419b851c2915eca2d, type: 2}
     - target: {fileID: 3820274476192020298, guid: 361c62a3be2ec264d91afd61c77d4f65, type: 3}
       propertyPath: conversacionesDisponibles.Array.data[0]
       value: 

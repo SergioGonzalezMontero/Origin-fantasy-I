@@ -58296,7 +58296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675410218505846189, guid: 21d6f940d04f9a94fa00597f52a89667, type: 3}
       propertyPath: restart.Array.data[2].reUsar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4675410218505846189, guid: 21d6f940d04f9a94fa00597f52a89667, type: 3}
       propertyPath: restart.Array.data[0].desbloqueada

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ConverCafe
   m_EditorClassIdentifier: 
   desbloqueada: 1
-  finalizado: 0
+  finalizado: 1
   reUsar: 1
   dialogos:
   - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
@@ -24,10 +24,19 @@ MonoBehaviour:
     dialogo: "La cafeter\xEDa parece estar cerrada...."
   - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
     sonido: {fileID: 0}
-    dialogo: "\xBFNo sabr\xE1s donde puedo encontrar bebida verdad?"
+    dialogo: "No podr\xE9 dar a Manuel su Caf\xE9 favorito..."
   - personaje: {fileID: 11400000, guid: d29209bbe6d2e074dbe6a179efd28ffa, type: 2}
     sonido: {fileID: 0}
-    dialogo: Claro, a mi me sobra un poco.
+    dialogo: "No te preocupes, \xA1a m\xED me sobra uno!"
+  - personaje: {fileID: 11400000, guid: d29209bbe6d2e074dbe6a179efd28ffa, type: 2}
+    sonido: {fileID: 0}
+    dialogo: Toma, te lo regalo.
+  - personaje: {fileID: 11400000, guid: 05990d070fbecdf4fa02070a0835a0d1, type: 2}
+    sonido: {fileID: 0}
+    dialogo: "Recibiste Caf\xE9 Favorito"
+  - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
+    sonido: {fileID: 0}
+    dialogo: "\xA1Oh! \xA1Muchas gracias!"
   pregunta: {fileID: 11400000, guid: d74f267f02406514bac1fd0646746469, type: 2}
   Evento: 0
   EventCode: 

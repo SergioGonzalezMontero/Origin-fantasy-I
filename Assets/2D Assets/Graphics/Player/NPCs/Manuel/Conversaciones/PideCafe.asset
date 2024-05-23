@@ -13,16 +13,21 @@ MonoBehaviour:
   m_Name: PideCafe
   m_EditorClassIdentifier: 
   desbloqueada: 1
-  finalizado: 0
+  finalizado: 1
   reUsar: 1
   dialogos:
   - personaje: {fileID: 11400000, guid: 4706a3219ff507043ac9b724cd92673a, type: 2}
     sonido: {fileID: 0}
-    dialogo: "Hola, antes de continuar, \xBFme puedes hacer un favor?"
+    dialogo: "Hola, tengo un poco de sue\xF1o..."
   - personaje: {fileID: 11400000, guid: 4706a3219ff507043ac9b724cd92673a, type: 2}
     sonido: {fileID: 0}
-    dialogo: "\xBFMe puedes traer un..."
+    dialogo: "\xBFMe puedes traer mi caf\xE9 favorito antes de pasar?"
+  - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
+    sonido: {fileID: 0}
+    dialogo: "\xA1Claro! Voy a la cafeter\xEDa a por \xE9l."
   - personaje: {fileID: 11400000, guid: 4706a3219ff507043ac9b724cd92673a, type: 2}
     sonido: {fileID: 0}
-    dialogo: "Caf\xE9 con leche templada, con sacarina, con canela y para llevar?"
+    dialogo: "Muchas gracias, aqu\xED te espero"
   pregunta: {fileID: 0}
+  Evento: 0
+  EventCode: 

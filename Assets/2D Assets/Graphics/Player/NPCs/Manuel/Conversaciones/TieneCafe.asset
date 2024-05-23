@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5e607a205c23c4ba2faaf3ae5e0290, type: 3}
   m_Name: TieneCafe
   m_EditorClassIdentifier: 
-  desbloqueada: 0
-  finalizado: 0
+  desbloqueada: 1
+  finalizado: 1
   reUsar: 0
   dialogos:
   - personaje: {fileID: 11400000, guid: 4706a3219ff507043ac9b724cd92673a, type: 2}
     sonido: {fileID: 0}
     dialogo: Oh muchas gracias.
+  - personaje: {fileID: 11400000, guid: 05990d070fbecdf4fa02070a0835a0d1, type: 2}
+    sonido: {fileID: 0}
+    dialogo: "Entregaste Caf\xE9 Favorito"
   - personaje: {fileID: 11400000, guid: 4706a3219ff507043ac9b724cd92673a, type: 2}
     sonido: {fileID: 0}
     dialogo: "\xA1Puedes pasar!"
   pregunta: {fileID: 0}
+  Evento: 1
+  EventCode: manuel_pasar

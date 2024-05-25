@@ -52,4 +52,20 @@ public class Coche : MonoBehaviour
     {
         transform.position = resetPosition + (moveUpwards ? Vector3.up : Vector3.down) * startDistance; // Devolvemos el coche al punto de reinicio
     }
-}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            reiniciar();
+        }
+    }
+
+    private void reiniciar()
+    {
+        Debug.Log("matao");
+        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+        GameManager.Instance.GameOver();
+    }
+
+    }

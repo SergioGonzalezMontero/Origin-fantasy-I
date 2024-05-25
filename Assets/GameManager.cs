@@ -11,12 +11,20 @@ public class GameManager : MonoBehaviour
 
     public bool[] niveles;
 
+    public int nivelMax = 0;
+
     private void Awake()
     {
         if(Instance == null)
+        {
             Instance = this;
+        }
+
         else
+        {
             Destroy(this.gameObject);
+        }
+            
         DontDestroyOnLoad(this);
     }
     public void GameOver()

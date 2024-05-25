@@ -35,7 +35,10 @@ public class LevelManager : MonoBehaviour
             conversacion[a].reUsar = restart[a].reUsar;
         }
         if(GameManager.Instance.niveles[nivelNum])
+        {
             eventManager.setLevel(nivelNum);
+        }
+            
     }
     public void newEvent(string _newEvent)
     {

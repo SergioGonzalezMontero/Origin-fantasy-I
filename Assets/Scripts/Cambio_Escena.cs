@@ -11,11 +11,28 @@ public class Cambio_Escena : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            Debug.Log("Entro en colision para escena:");
             PlayerPrefs.SetString("EscenaAnterior", SceneManager.GetActiveScene().name);
             PlayerPrefs.Save();
-            if(LevelManager.instance.nivelNum < num_Escena)
+            Debug.Log("Entro en cambio de escena num escena"+ LevelManager.instance.nivelNum);
+            if (GameManager.Instance.nivelMax <= LevelManager.instance.nivelNum)
+            {
+                Debug.Log("Cambio numero de escena a" + num_Escena);
+                GameManager.Instance.nivelMax = LevelManager.instance.nivelNum;
+            }
+            for (int i = 0; i< GameManager.Instance.nivelMax; i++)
+            {
+                GameManager.Instance.niveles[i] = true;
+                Debug.Log("Completo los niveles: " + i);
+            }
+            if (LevelManager.instance.nivelNum < num_Escena) 
+            {
+                Debug.Log("Entro en cambiar instancia a true");
                 GameManager.Instance.niveles[LevelManager.instance.nivelNum] = true;
+                Debug.Log("Entro en escena");
+                
+            }
+                
             switch (SceneManager.GetActiveScene().name.ToString())
             {
                 case "Calle":
@@ -25,6 +42,7 @@ public class Cambio_Escena : MonoBehaviour
                 case "Entrada":
                     if(num_Escena == 1)
                     {
+                        
                         SceneManager.LoadScene("Calle");
                     } else if(num_Escena == 2) 
                     {

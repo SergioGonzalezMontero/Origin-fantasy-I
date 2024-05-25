@@ -9,7 +9,8 @@ public class EventManager : MonoBehaviour
     public GameObject[] Autos;
 
     //Evento2
-    public GameObject manuel_pasar;
+    public GameObject [] manuel_pasar;
+
 
     public void newEvent(string eventCode)
     {
@@ -26,11 +27,11 @@ public class EventManager : MonoBehaviour
             case "auto":
                 if(Autos != null)
                 {
-                    for (int a = 0; a < Autos.Length; a++)
+                    for (int i = 0; i < Autos.Length; i++)
                     {
-                        if (Autos[a] == null)
+                        if (Autos[i] == null)
                             return;
-                        Autos[a].SetActive(false);
+                        Autos[i].SetActive(false);
                     }
                     StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
                 }
@@ -39,7 +40,12 @@ public class EventManager : MonoBehaviour
             case "manuel_pasar":
                 if(manuel_pasar!= null)
                 {
-                    manuel_pasar.SetActive(false);
+                    for (int i = 0; i < manuel_pasar.Length; i++)
+                    {
+ 
+                        manuel_pasar[i].SetActive(false);
+                    }
+
                 }
                 break;
         }
@@ -51,14 +57,20 @@ public class EventManager : MonoBehaviour
             case 0:
                 break;
             case 1:
-                for (int a = 0; a < Autos.Length; a++)
+                for (int i = 0; i < Autos.Length; i++)
                 {
-                    Autos[a].SetActive(false);
+                    Autos[i].SetActive(false);
                 }
                 manguera.SetActive(false);
                 break;
             case 2:
-                manuel_pasar.SetActive(false);
+
+                for (int i = 0; i < manuel_pasar.Length; i++)
+                {
+                   manuel_pasar[i].SetActive(false);
+                }
+                
+
                 break;
 
         }

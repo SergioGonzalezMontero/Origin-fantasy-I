@@ -57663,7 +57663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: niveles.Array.size
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8349057527605040229, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58150,6 +58150,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1172744867}
     - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
+      propertyPath: Autos.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
       propertyPath: Autos.Array.data[0]
       value: 
       objectReference: {fileID: 1788973929}
@@ -58157,6 +58161,14 @@ PrefabInstance:
       propertyPath: Autos.Array.data[1]
       value: 
       objectReference: {fileID: 1702314381}
+    - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
+      propertyPath: Autos.Array.data[2]
+      value: 
+      objectReference: {fileID: 163011011}
+    - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
+      propertyPath: Autos.Array.data[3]
+      value: 
+      objectReference: {fileID: 543181548}
     - target: {fileID: 8191702010431991949, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.255552

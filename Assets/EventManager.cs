@@ -69,8 +69,6 @@ public class EventManager : MonoBehaviour
                 {
                    manuel_pasar[i].SetActive(false);
                 }
-                
-
                 break;
 
         }

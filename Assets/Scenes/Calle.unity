@@ -23052,7 +23052,7 @@ MonoBehaviour:
   initialSpeed: 0
   maxSpeed: 8
   accelerationTime: 3
-  delayInSeconds: 3
+  delayInSeconds: 1
   disappearAfterSeconds: 8
   animator: {fileID: 924099192}
 --- !u!95 &924099192

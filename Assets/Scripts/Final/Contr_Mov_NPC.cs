@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,13 @@ public class Contr_Mov_NPC : MonoBehaviour
     public bool bucle = false;
     public List<Movimiento> movimientos;
     
-
+    private Animator animator;
     private int indiceActual = 0;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Start()
     {
@@ -41,6 +47,8 @@ public class Contr_Mov_NPC : MonoBehaviour
 
     private IEnumerator MoverNPC(Movimiento movimiento)
     {
+        animator.Play(Convert.ToString(movimiento.animacion));
+
         Vector3 direccion = Vector3.zero;
 
         switch (movimiento.direccion)

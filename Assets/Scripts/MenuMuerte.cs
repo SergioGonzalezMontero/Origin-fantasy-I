@@ -11,14 +11,17 @@ public class MenuMuerte : MonoBehaviour
     void Start()
     {
         // Aseguramos que el menú de pausa esté desactivado al inicio
+        pantallaMuerte.SetActive(true);
         pantallaMuerte.SetActive(false);
         Debug.Log("Entro en script muerte");
     }
 
     void Update()
     {
+        Debug.Log(GameManager.Instance.vidas);
         if (GameManager.Instance != null && GameManager.Instance.vidas <= 0)
         {
+            Debug.Log("Intento lanzar pantalla muerte");
             PantallaMuerte();
         }
         else if (GameManager.Instance == null)
@@ -29,13 +32,15 @@ public class MenuMuerte : MonoBehaviour
 
     public void PantallaMuerte()
     {
+        Debug.Log("Entro en pantalla muerte");
         if (!muerto)
         {
+            Debug.Log("Entro a lanzar la pantalla");
             muerto = true;  // Cambiamos el estado
-
-            Debug.Log("se murio");
             pantallaMuerte.SetActive(true);
-            Time.timeScale = 0f;
+            Debug.Log("se murio");
+            
+            //Time.timeScale = 0f;
         }
     }
 

@@ -20,7 +20,7 @@ public class Per_Movimiento : MonoBehaviour
 
     public bool quemado = false;
 
-
+  
 
 
 

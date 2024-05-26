@@ -6,13 +6,13 @@ public class Fuego : MonoBehaviour
 {
 
     int veces = 0;
-    public float tiempoDaño;
+    public float tiempoDano;
     private bool nuevaQuemadura = false;
     private GameObject playerRef;
     // Start is called before the first frame update
     void Start()
     {
-        tiempoDaño = 1;
+        tiempoDano = 1;
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class Fuego : MonoBehaviour
 
     IEnumerator newQuemaduraCorrutina()
     {
-        yield return new WaitForSeconds(tiempoDaño);
+        yield return new WaitForSeconds(tiempoDano);
         nuevaQuemadura = true;
         playerRef.GetComponent<Per_Movimiento>().DanoJugador(1);
     }

@@ -32,25 +32,25 @@ public class Fuego : MonoBehaviour
             StartCoroutine(newQuemaduraCorrutina());
         }
     }
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        if (nuevaQuemadura)
-    //        {
-    //            nuevaQuemadura = false;
-    //            playerRef = other.gameObject;
-    //            StartCoroutine(newQuemaduraCorrutina());
-    //        }
-    //    }
-    //}
-    //void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        StopAllCoroutines();
-    //    }
-    //}
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            if (nuevaQuemadura)
+            {
+                nuevaQuemadura = false;
+                playerRef = other.gameObject;
+                StartCoroutine(newQuemaduraCorrutina());
+            }
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            StopAllCoroutines();
+        }
+    }
 
     IEnumerator newQuemaduraCorrutina()
     {

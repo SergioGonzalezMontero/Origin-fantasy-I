@@ -10,6 +10,7 @@ public class EventManager : MonoBehaviour
 
     //Evento2
     public GameObject [] manuel_pasar;
+    
 
 
     public void newEvent(string eventCode)

@@ -20616,7 +20616,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1175462241}
-  - {fileID: 1118192403}
   - {fileID: 1978102502}
   - {fileID: 219004198}
   - {fileID: 1942348725}
@@ -20631,6 +20630,7 @@ Transform:
   - {fileID: 1407997855}
   - {fileID: 1103788910}
   - {fileID: 1742643814}
+  - {fileID: 1118192403}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440669138
@@ -23171,7 +23171,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.030854106, y: -0.21597731}
+  m_Offset: {x: 0.030854106, y: -19.423462}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -23182,7 +23182,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.506338, y: 6.5680456}
+  m_Size: {x: 2.506338, y: 44.983017}
   m_EdgeRadius: 0
 --- !u!1001 &988314633
 PrefabInstance:

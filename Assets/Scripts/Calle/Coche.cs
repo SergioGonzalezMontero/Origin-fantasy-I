@@ -15,6 +15,9 @@ public class Coche : MonoBehaviour
 
     void Start()
     {
+        timeToDisappear += Time.time;
+
+
         originalPosition = transform.position; // Almacenamos la posición original del coche
         resetPosition = originalPosition + (moveUpwards ? Vector3.up : Vector3.down) * resetDistance; // Calculamos la posición de reinicio del coche
 

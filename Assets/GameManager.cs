@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     public int nivelMax = 0;
 
+    public bool ComienzoJuego = true;
+
+
     private void Awake()
     {
         if(Instance == null)

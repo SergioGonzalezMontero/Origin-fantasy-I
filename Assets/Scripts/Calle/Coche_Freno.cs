@@ -17,16 +17,24 @@ public class Coche_Freno : MonoBehaviour
 
     void Start()
     {
+        tiempoHastaAparecer += Time.time;
+        //Debug.Log("                 Awake Tiempo: " + tiempoHastaAparecer);
+        //Debug.Log("                 Awake Time: " + Time.time);
+
         originalPosition = transform.position; // Almacenamos la posición original del coche
         brakeStartDistance = destination - brakeDistance; // Calculamos la distancia desde el destino donde comienza el frenado
 
         animator.Play(nombreAnimacion);
+
+        //tiempoHastaAparecer += Time.deltaTime;
     }
 
     void Update()
     {
         if (Time.time >= tiempoHastaAparecer)
         {
+            //Debug.Log("Tiempo: " + tiempoHastaAparecer);
+            //Debug.Log("Time: " + Time.time);
             // Si el coche está en movimiento
             if (moving)
             {

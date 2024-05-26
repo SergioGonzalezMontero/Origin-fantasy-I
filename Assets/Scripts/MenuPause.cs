@@ -30,11 +30,13 @@ public class MenuPause : MonoBehaviour
         {
             pantallaPausa.SetActive(true);  // Activamos el menú de pausa
             Time.timeScale = 0f;  // Pausamos el juego
+            Debug.Log("Juego pausado y menú de pausa activado");
         }
         else
         {
             pantallaPausa.SetActive(false);  // Desactivamos el menú de pausa
             Time.timeScale = 1f;  // Reanudamos el juego
+            Debug.Log("Juego reanudado y menú de pausa desactivado");
         }
     }
 
@@ -43,5 +45,13 @@ public class MenuPause : MonoBehaviour
         // Reanudamos el tiempo antes de cambiar de escena
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void VolverAlJuego()
+    {
+        pausado = false;
+        pantallaPausa.SetActive(false);  // Desactivamos el menú de pausa
+        Time.timeScale = 1f;  // Reanudamos el juego
+        Debug.Log("Juego reanudado y menú de pausa desactivado");
     }
 }

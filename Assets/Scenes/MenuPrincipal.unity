@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 1100272865}
   - component: {fileID: 1100272867}
   - component: {fileID: 1100272868}
+  - component: {fileID: 1100272869}
   m_Layer: 5
   m_Name: Fondo
   m_TagString: Untagged
@@ -561,6 +562,20 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &1100272869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100272864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b131bad79f4760e4c83fe8f28f025369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primeraEscena: 
+  video: {fileID: 1100272868}
 --- !u!1 &1139299509
 GameObject:
   m_ObjectHideFlags: 0

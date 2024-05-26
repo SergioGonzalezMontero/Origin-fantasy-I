@@ -7,6 +7,7 @@ public class MenuMuerte : MonoBehaviour
 {
     public GameObject pantallaMuerte;
     private bool muerto = false;  // Inicializamos pausado como false
+    private GameObject UI;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class MenuMuerte : MonoBehaviour
         Debug.Log(GameManager.Instance.vidas);
         if (GameManager.Instance != null && GameManager.Instance.vidas <= 0)
         {
+
             Debug.Log("Intento lanzar pantalla muerte");
             PantallaMuerte();
         }

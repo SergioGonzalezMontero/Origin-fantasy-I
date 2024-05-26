@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject pantallaMuerte;
 
 
+
+
     private void Awake()
     {
         if(Instance == null)
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GameOver");
         vidas = 0;
+
         pantallaMuerte.SetActive(true);
         Time.timeScale = 0f;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

@@ -65,6 +65,7 @@ public class UIManager : MonoBehaviour
                 listaCorazones[1].sprite = corazonLleno;
                 listaCorazones[2].sprite = corazonLleno;
                 break;
+
         }
     }
     public IEnumerator nuevaTransicion()

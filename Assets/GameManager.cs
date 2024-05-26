@@ -15,13 +15,16 @@ public class GameManager : MonoBehaviour
 
     public bool ComienzoJuego = true;
 
+    public GameObject pantallaMuerte;
+
 
     private void Awake()
     {
         if(Instance == null)
         {
             Instance = this;
-        }
+            pantallaMuerte.SetActive(false);
+}
 
         else
         {
@@ -33,8 +36,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("GameOver");
-        vidas = 6;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        vidas = 0;
+        pantallaMuerte.SetActive(true);
+        Time.timeScale = 0f;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
 }

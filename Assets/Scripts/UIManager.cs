@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] public List<Image> listaCorazones;
     [SerializeField] public Sprite corazonLleno, corazonMitad, corazonVacio;
     public GameObject transicion;
+    
     void Start()
     {
         Globo.sumaGlobo += SumarGlobos;

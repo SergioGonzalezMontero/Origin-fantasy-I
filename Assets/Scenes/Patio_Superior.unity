@@ -69016,6 +69016,22 @@ PrefabInstance:
       propertyPath: conversacion
       value: 
       objectReference: {fileID: 11400000, guid: ab1cf0672fede72409e0c0df1f2af860, type: 2}
+    - target: {fileID: 4598083406212960039, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1718774182}
+    - target: {fileID: 4598083406212960039, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolverAlJuego
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524957129863863096, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1718774182}
+    - target: {fileID: 5524957129863863096, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolverMenuPrincipal
+      objectReference: {fileID: 0}
     - target: {fileID: 5757424506171474933, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -69112,6 +69128,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7513827388701288940, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7793390605904026218, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -69131,6 +69151,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1718774181}
+    - targetCorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1718774182}
   m_SourcePrefab: {fileID: 100100000, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
 --- !u!114 &1422546970 stripped
 MonoBehaviour:
@@ -69154,6 +69177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275098292c5c16543a7afd12219dfc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1422546972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7513827388701288940, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+  m_PrefabInstance: {fileID: 1422546969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1423491190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71787,6 +71815,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pantallaPausa: {fileID: 1667136595}
+--- !u!114 &1718774182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718774176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e05887af3a61e745b469b5a8646bee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pantallaMuerte: {fileID: 1422546972}
 --- !u!1001 &1732568765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71799,6 +71840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: pantallaMuerte
+      value: 
+      objectReference: {fileID: 1422546972}
     - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: niveles.Array.size
       value: 7

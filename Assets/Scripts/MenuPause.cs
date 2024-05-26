@@ -14,12 +14,15 @@ public class MenuPause : MonoBehaviour
 
     void Update()
     {
-        // Detecta si se ha presionado la tecla Escape
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Pulso botón esc");
-            TogglePause();
+
+            // Detecta si se ha presionado la tecla Escape
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("Pulso botón esc");
+                TogglePause();
+
         }
+
     }
 
     public void TogglePause()

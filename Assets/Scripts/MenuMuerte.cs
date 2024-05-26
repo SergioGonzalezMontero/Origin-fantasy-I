@@ -40,7 +40,7 @@ public class MenuMuerte : MonoBehaviour
             pantallaMuerte.SetActive(true);
             Debug.Log("se murio");
             
-            //Time.timeScale = 0f;
+            Time.timeScale = 0f;
         }
     }
 
@@ -57,6 +57,9 @@ public class MenuMuerte : MonoBehaviour
         pantallaMuerte.SetActive(false);  // Desactivamos el menú de pausa
         Time.timeScale = 1f;  // Reanudamos el juego
         Debug.Log("Juego reanudado y menú de pausa desactivado");
+        GameManager.Instance.vidas = 6;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 }
 

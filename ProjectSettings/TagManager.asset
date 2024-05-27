@@ -17,9 +17,9 @@ TagManager:
   - UI
   - Suelo
   - Personaje
-  - Tejado
+  - oejado
   - npc
-  - 
+  - ParedPorche
   - 
   - 
   - 
@@ -68,6 +68,9 @@ TagManager:
     locked: 0
   - name: TejadoPorche
     uniqueID: 3242046597
+    locked: 0
+  - name: ParedPorche
+    uniqueID: 3296314269
     locked: 0
   - name: Tejado
     uniqueID: 3182202379

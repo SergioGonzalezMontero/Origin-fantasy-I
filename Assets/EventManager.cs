@@ -21,20 +21,26 @@ public class EventManager : MonoBehaviour
             case "manguera":
                 if(manguera != null)
                 {
-                    manguera.SetActive(false);
+
                     StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                    StartCoroutine(esperarUnSeg());
+                    manguera.SetActive(false);
+                    
                 }
                 break;
             case "auto":
                 if(Autos != null)
                 {
+                    
+                    StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                    StartCoroutine(esperarUnSeg());
                     for (int i = 0; i < Autos.Length; i++)
                     {
                         if (Autos[i] == null)
                             return;
                         Autos[i].SetActive(false);
                     }
-                    StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                    
                 }
                 break;
 
@@ -73,5 +79,17 @@ public class EventManager : MonoBehaviour
                 break;
 
         }
+    }
+    IEnumerator esperarUnSeg()
+    {
+        Time.timeScale = 0f;
+        Debug.Log("Esperando un segundo...");
+
+        // Espera un segundo
+        yield return new WaitForSeconds(3);
+
+        
+        Debug.Log("Un segundo ha pasado.");
+        Time.timeScale = 1f;
     }
 }

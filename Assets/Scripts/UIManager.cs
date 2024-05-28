@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class UIManager : MonoBehaviour
 {
    
@@ -10,14 +11,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text textoGlobos;
     [SerializeField] public List<Image> listaCorazones;
     [SerializeField] public Sprite corazonLleno, corazonMitad, corazonVacio;
-    public GameObject transicion;
+    public Image transicion;
     
     void Start()
     {
-        Globo.sumaGlobo += SumarGlobos;
-        if(transicion != null)
-            transicion.SetActive(false);
-        ActualizarVidaUI(GameManager.Instance.vidas);
+        //Globo.sumaGlobo += SumarGlobos;
+        //if(transicion != null)
+        //    transicion.SetActive(false);
+        //ActualizarVidaUI(GameManager.Instance.vidas);
     }
 
     private void SumarGlobos(int globo)
@@ -28,7 +29,7 @@ public class UIManager : MonoBehaviour
     
     public void ActualizarVidaUI (int vida)
     {
-        Debug.Log(vida);
+        
         switch(vida){
             case 0:
                 listaCorazones[0].sprite = corazonVacio;
@@ -68,13 +69,43 @@ public class UIManager : MonoBehaviour
 
         }
     }
+    //public IEnumerator nuevaTransicion()
+    //{
+    //    if (transicion != null)
+    //    {
+    //        transicion.SetActive(true);
+    //        yield return new WaitForSeconds(0.5f);
+    //        transicion.SetActive(false);
+    //    }
+    //}
+
+  
+    public float duracion = 1.0f;
     public IEnumerator nuevaTransicion()
     {
         if (transicion != null)
         {
-            transicion.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            transicion.SetActive(false);
+            transicion.gameObject.SetActive(true);
+            yield return StartCoroutine(OscurecerPantalla());
+            transicion.gameObject.SetActive(false);
         }
     }
+    private IEnumerator OscurecerPantalla()
+    {
+        float tiempoTranscurrido = 0f;
+        Color color = transicion.color;
+
+        while (tiempoTranscurrido < duracion)
+        {
+            tiempoTranscurrido += Time.deltaTime;
+            color.a = Mathf.Clamp01(tiempoTranscurrido / duracion);
+            transicion.color = color;
+            yield return null;
+        }
+
+        color.a = 1f;
+        transicion.color = color;
+    }
+
+
 }

@@ -1161,11 +1161,17 @@ Transform:
   - {fileID: 1257784185}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &333423855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8784385595060844907, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+--- !u!114 &333423857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7624193200749419371, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
   m_PrefabInstance: {fileID: 6734823364358691593}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &333776615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6747,6 +6753,43 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1626859630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449195284628941440, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+  m_PrefabInstance: {fileID: 6734823364358691593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1626859631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 861821072788773831, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+  m_PrefabInstance: {fileID: 6734823364358691593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626859630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1626859632
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626859630}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e252980821818734f927e03218133584, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1656753807
 GameObject:
   m_ObjectHideFlags: 0
@@ -59529,13 +59572,21 @@ PrefabInstance:
       value: -53.543
       objectReference: {fileID: 0}
     - target: {fileID: 8225613237057001284, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: duracion
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225613237057001284, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: transicion
       value: 
-      objectReference: {fileID: 333423855}
+      objectReference: {fileID: 333423857}
     - target: {fileID: 8225613237057001284, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: textoGlobos
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8225613237057001284, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: imagenTransicion
+      value: 
+      objectReference: {fileID: 1626859631}
     - target: {fileID: 8965977518301022390, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 150
@@ -59566,6 +59617,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5252872449625228211}
+    - targetCorrespondingSourceObject: {fileID: 449195284628941440, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1626859632}
   m_SourcePrefab: {fileID: 100100000, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
 --- !u!1 &6734823364358691595 stripped
 GameObject:
@@ -59657,6 +59711,10 @@ PrefabInstance:
       propertyPath: Autos.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
+      propertyPath: imagenTransicion
+      value: 
+      objectReference: {fileID: 1626859631}
     - target: {fileID: 7927549142689028713, guid: b7a7bdbb06b16eb42b24b4b64d9756fa, type: 3}
       propertyPath: Autos.Array.data[0]
       value: 

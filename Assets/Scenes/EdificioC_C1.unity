@@ -543,48 +543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bucle: 0
   movimientos:
-  - direccion: 3
-    animacion: 7
-    velocidad: 0
-    duracion: 0
-    espera: 1.08
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 1.43
-    espera: 0
   - direccion: 1
-    animacion: 1
-    velocidad: 2
-    duracion: 0.46
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 2.7
-    espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 5.5
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.2
-    espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 0.6
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.7
-    espera: 0
-  - direccion: 3
-    animacion: 6
+    animacion: 5
     velocidad: 0
     duracion: 0
     espera: 0
@@ -709,48 +669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bucle: 0
   movimientos:
-  - direccion: 3
-    animacion: 7
-    velocidad: 0
-    duracion: 0
-    espera: 1.08
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 1.43
-    espera: 0
-  - direccion: 1
-    animacion: 1
-    velocidad: 2
-    duracion: 0.46
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 2.7
-    espera: 0
   - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 5.5
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.2
-    espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 0.6
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.7
-    espera: 0
-  - direccion: 3
-    animacion: 6
+    animacion: 4
     velocidad: 0
     duracion: 0
     espera: 0
@@ -2521,48 +2441,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bucle: 0
   movimientos:
+  - direccion: 2
+    animacion: 6
+    velocidad: 0
+    duracion: 0
+    espera: 1.64
+  - direccion: 1
+    animacion: 5
+    velocidad: 0
+    duracion: 0
+    espera: 1.26
+  - direccion: 1
+    animacion: 1
+    velocidad: 1.33
+    duracion: 4.7000003
+    espera: 0
+  - direccion: 3
+    animacion: 3
+    velocidad: 1.33
+    duracion: 0.33
+    espera: 0
   - direccion: 3
     animacion: 7
     velocidad: 0
     duracion: 0
-    espera: 1.08
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 1.43
-    espera: 0
-  - direccion: 1
-    animacion: 1
-    velocidad: 2
-    duracion: 0.46
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 2.7
-    espera: 0
+    espera: 1.65
   - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 5.5
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.2
-    espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 0.6
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.7
-    espera: 0
-  - direccion: 3
-    animacion: 6
+    animacion: 4
     velocidad: 0
     duracion: 0
     espera: 0
@@ -2627,7 +2532,7 @@ Transform:
   m_GameObject: {fileID: 711121939}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.51, y: 3.67, z: -0.029280957}
+  m_LocalPosition: {x: -2.02, y: 4, z: -0.029280957}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2687,47 +2592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bucle: 0
   movimientos:
-  - direccion: 3
-    animacion: 7
-    velocidad: 0
-    duracion: 0
-    espera: 1.08
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 1.43
-    espera: 0
-  - direccion: 1
-    animacion: 1
-    velocidad: 2
-    duracion: 0.46
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 2.7
-    espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 5.5
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.2
-    espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 0.6
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.7
-    espera: 0
-  - direccion: 3
+  - direccion: 2
     animacion: 6
     velocidad: 0
     duracion: 0
@@ -2793,7 +2658,7 @@ Transform:
   m_GameObject: {fileID: 715257567}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.75, y: -9.18, z: -0.029280957}
+  m_LocalPosition: {x: 3.75, y: -9.27, z: -0.029280957}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3070,6 +2935,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -2, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 3, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -3090,31 +2965,11 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 1, y: -2, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
       m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3330,7 +3185,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: c2bf20e739de2ba4d8ac297b815a81b0, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 5d7cabc8ccd250a4fa7b64671f248fbb, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 545c6fde938d00f469b54233d2e0ff96, type: 2}
@@ -3399,7 +3254,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 729560790, guid: 1a70c7b542ce1ca4aa947e94a39b9695, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: -455161568, guid: 1a70c7b542ce1ca4aa947e94a39b9695, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: -1242716245, guid: 1a70c7b542ce1ca4aa947e94a39b9695, type: 3}
@@ -3460,7 +3315,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 803000048, guid: 206b824d9e910694c93b711e672c2009, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data:
       e00: 1
       e01: 0
@@ -3479,7 +3334,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -3696,6 +3551,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -2, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 1, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -3721,6 +3586,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 3
       m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -2, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3828,9 +3703,9 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 5
+  - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 5d7cabc8ccd250a4fa7b64671f248fbb, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 545c6fde938d00f469b54233d2e0ff96, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 87369563f4a7b6b46a07d9339c376831, type: 2}
@@ -3851,9 +3726,9 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b8760803fa6e0b342a6f2c164e8cebc0, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 5
+  - m_RefCount: 6
     m_Data: {fileID: -455161568, guid: 1a70c7b542ce1ca4aa947e94a39b9695, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {fileID: -1242716245, guid: 1a70c7b542ce1ca4aa947e94a39b9695, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -412913543, guid: 1a70c7b542ce1ca4aa947e94a39b9695, type: 3}
@@ -3874,7 +3749,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -595124353, guid: 1a70c7b542ce1ca4aa947e94a39b9695, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 23
+  - m_RefCount: 25
     m_Data:
       e00: 1
       e01: 0
@@ -3893,7 +3768,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 23
+  - m_RefCount: 25
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4474,44 +4349,24 @@ MonoBehaviour:
     animacion: 7
     velocidad: 0
     duracion: 0
-    espera: 1.08
+    espera: 2.15
+  - direccion: 1
+    animacion: 5
+    velocidad: 0
+    duracion: 0
+    espera: 1.59
   - direccion: 3
     animacion: 3
-    velocidad: 2
-    duracion: 1.43
+    velocidad: 1.44
+    duracion: 0.72
     espera: 0
   - direccion: 1
     animacion: 1
-    velocidad: 2
-    duracion: 0.46
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 2.7
+    velocidad: 1.44
+    duracion: 2.86
     espera: 0
   - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 5.5
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.2
-    espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 0.6
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.7
-    espera: 0
-  - direccion: 3
-    animacion: 6
+    animacion: 4
     velocidad: 0
     duracion: 0
     espera: 0
@@ -4576,7 +4431,7 @@ Transform:
   m_GameObject: {fileID: 1211478223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.27, y: 3.64, z: -0.029280957}
+  m_LocalPosition: {x: -3.14, y: 4.03, z: -0.029280957}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4640,7 +4495,7 @@ MonoBehaviour:
     animacion: 7
     velocidad: 0
     duracion: 0
-    espera: 1.08
+    espera: 3
   - direccion: 3
     animacion: 3
     velocidad: 2
@@ -5894,43 +5749,23 @@ MonoBehaviour:
     animacion: 7
     velocidad: 0
     duracion: 0
-    espera: 1.08
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 1.43
-    espera: 0
-  - direccion: 1
-    animacion: 1
-    velocidad: 2
-    duracion: 0.46
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 2.7
-    espera: 0
+    espera: 1
+  - direccion: 2
+    animacion: 6
+    velocidad: 0
+    duracion: 0
+    espera: 1
   - direccion: 0
     animacion: 0
-    velocidad: 2
-    duracion: 5.5
+    velocidad: 2.5
+    duracion: 1.95
     espera: 0
   - direccion: 3
     animacion: 3
     velocidad: 2
-    duracion: 0.2
+    duracion: 0.5
     espera: 0
-  - direccion: 0
-    animacion: 0
-    velocidad: 2
-    duracion: 0.6
-    espera: 0
-  - direccion: 3
-    animacion: 3
-    velocidad: 2
-    duracion: 0.7
-    espera: 0
-  - direccion: 3
+  - direccion: 2
     animacion: 6
     velocidad: 0
     duracion: 0
@@ -5996,7 +5831,7 @@ Transform:
   m_GameObject: {fileID: 1540828252}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.65, y: -9.11, z: -0.029280957}
+  m_LocalPosition: {x: 2.43, y: -9.22, z: -0.029280957}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6035,6 +5870,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bucle: 0
   movimientos:
+  - direccion: 1
+    animacion: 5
+    velocidad: 0
+    duracion: 0
+    espera: 2
   - direccion: 3
     animacion: 3
     velocidad: 2.5

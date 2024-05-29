@@ -95,6 +95,7 @@ public class UIManager : MonoBehaviour
     {
         if (transicion != null)
         {
+
             transicion.gameObject.SetActive(true);
             yield return StartCoroutine(AclararPantalla());
             transicion.gameObject.SetActive(false);
@@ -106,6 +107,7 @@ public class UIManager : MonoBehaviour
         {
             transicion.gameObject.SetActive(true);
             yield return StartCoroutine(OscurecerPantalla());
+            
             transicion.gameObject.SetActive(false);
         }
     }
@@ -123,7 +125,7 @@ public class UIManager : MonoBehaviour
             transicion.color = color;
             yield return null;
         }
-
+        yield return StartCoroutine(esperarUnSeg());
         color.a = 1f;
         transicion.color = color;
     }
@@ -146,5 +148,11 @@ public class UIManager : MonoBehaviour
         transicion.color = color;
     }
 
-
+    IEnumerator esperarUnSeg()
+    {
+        Debug.Log("Esperando un segundo...");
+        // Espera un segundo en tiempo real
+        yield return new WaitForSecondsRealtime(0.2f);
+        Debug.Log("Un segundo ha pasado.");
+    }
 }

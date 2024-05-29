@@ -70,7 +70,8 @@ public class S_DialogoUI : MonoBehaviour
                     nombre.text = conversacion.dialogos[localIn].personaje.nombre;
                     StopAllCoroutines();
                     StartCoroutine(EscribirTexto());
-                    speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
+                    if (conversacion.dialogos[localIn].personaje != null)
+                        speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
 
                     if(conversacion.dialogos[localIn].sonido!= null)
                     {
@@ -95,7 +96,9 @@ public class S_DialogoUI : MonoBehaviour
                 nombre.text = conversacion.dialogos[localIn].personaje.nombre;
                 StopAllCoroutines();
                 StartCoroutine(EscribirTexto());
-                speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
+
+                if (conversacion.dialogos[localIn].personaje != null)
+                    speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
 
                 if (conversacion.dialogos[localIn].sonido != null)
                 {
@@ -125,7 +128,8 @@ public class S_DialogoUI : MonoBehaviour
                     nombre.text = conversacion.dialogos[localIn].personaje.nombre;
                     StopAllCoroutines();
                     StartCoroutine(EscribirTexto());
-                    speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
+                    if (conversacion.dialogos[localIn].personaje != null)
+                        speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;
 
                     if (conversacion.dialogos[localIn].sonido != null)
                     {

@@ -44,7 +44,7 @@ public class EventManager : MonoBehaviour
     {
         yield return StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
         manguera.SetActive(false);
-       // yield return StartCoroutine(esperarUnSeg());
+        //yield return StartCoroutine(esperarUnSeg());
         yield return StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
     }
 

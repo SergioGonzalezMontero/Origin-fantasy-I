@@ -12,8 +12,6 @@ public class S_DialogoUI : MonoBehaviour
 
     [SerializeField]
     private GameObject convContainer;
-    [SerializeField]
-    private GameObject pregContainer;
 
     [SerializeField]
     private Image speakIm;
@@ -38,7 +36,7 @@ public class S_DialogoUI : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         convContainer.SetActive(true);
-        pregContainer.SetActive(false);
+
 
         continuarBoton.gameObject.SetActive(true);
         anteriorBoton.gameObject.SetActive(false);
@@ -56,7 +54,7 @@ public class S_DialogoUI : MonoBehaviour
     public void ActualizarTextos(int comportamiento)
     {
         convContainer.SetActive(true);
-        pregContainer.SetActive(false);
+
 
         Debug.Log("Nuevos Textos");
         switch(comportamiento)
@@ -157,15 +155,7 @@ public class S_DialogoUI : MonoBehaviour
 
                     if (conversacion.Evento)
                         LevelManager.instance.newEvent(conversacion.EventCode);
-                    if (conversacion.pregunta != null)
-                    {
-                        convContainer.SetActive(false);
-                        pregContainer.SetActive(true);
-                        var preg = conversacion.pregunta;
-                        S_DialogoManager.instance.controladorPreguntas.ActivarBotones(preg.opciones.Length, preg.pregunta, preg.opciones);
 
-                        return;
-                    }
                     S_DialogoManager.instance.MostrarUI(false);
                     
                     return;

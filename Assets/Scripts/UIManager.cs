@@ -79,10 +79,29 @@ public class UIManager : MonoBehaviour
     //    }
     //}
 
-  
-    public float duracion = 1.0f;
+
+    public void nuevaTransicionPlana()
+    {
+        if (transicion != null)
+        {
+            transicion.gameObject.SetActive(true);
+
+            transicion.gameObject.SetActive(false);
+        }
+    }
+
+    public float duracion = 2.0f; // segundos que dura la transicion
     public IEnumerator nuevaTransicion()
     {
+        if (transicion != null)
+        {
+            transicion.gameObject.SetActive(true);
+            yield return StartCoroutine(AclararPantalla());
+            transicion.gameObject.SetActive(false);
+        }
+    }
+
+    public IEnumerator antesNuevaTransicion(){
         if (transicion != null)
         {
             transicion.gameObject.SetActive(true);
@@ -90,10 +109,12 @@ public class UIManager : MonoBehaviour
             transicion.gameObject.SetActive(false);
         }
     }
+
     private IEnumerator OscurecerPantalla()
     {
         float tiempoTranscurrido = 0f;
         Color color = transicion.color;
+
 
         while (tiempoTranscurrido < duracion)
         {
@@ -104,6 +125,24 @@ public class UIManager : MonoBehaviour
         }
 
         color.a = 1f;
+        transicion.color = color;
+    }
+
+    private IEnumerator AclararPantalla()
+    {
+        float tiempoTranscurrido = 0f;
+        Color color = transicion.color;
+
+
+        while (tiempoTranscurrido < duracion)
+        {
+            tiempoTranscurrido += Time.deltaTime;
+            color.a = 1f - Mathf.Clamp01(tiempoTranscurrido / duracion);
+            transicion.color = color;
+            yield return null;
+        }
+
+        color.a = 0f;  // Asegura que la transición termina completamente transparente
         transicion.color = color;
     }
 

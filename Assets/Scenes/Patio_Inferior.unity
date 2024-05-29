@@ -4834,7 +4834,8 @@ PrefabInstance:
       value: MenuPause, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7621705894157936451, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
@@ -4843,9 +4844,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1306102564}
-    - targetCorrespondingSourceObject: {fileID: 7621705894157936451, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1306102563}
   m_SourcePrefab: {fileID: 100100000, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
 --- !u!114 &1306102559 stripped
 MonoBehaviour:
@@ -4858,42 +4856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ebaccb3eb41f04ebcc0e4f8f551be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1306102560 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3305778071947776539, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
-  m_PrefabInstance: {fileID: 1306102558}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1306102561 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5868018210129231981, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
-  m_PrefabInstance: {fileID: 1306102558}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1306102562 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7621705894157936451, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
-  m_PrefabInstance: {fileID: 1306102558}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1306102563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306102562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbe468e4018face449e15ba0d13819f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttomPref: {fileID: 1306102560}
-  pregText: {fileID: 1306102561}
-  opcionesContainer: {fileID: 0}
 --- !u!114 &1306102564
 MonoBehaviour:
   m_ObjectHideFlags: 0

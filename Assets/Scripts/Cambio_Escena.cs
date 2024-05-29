@@ -47,22 +47,29 @@ public class Cambio_Escena : MonoBehaviour
                     Debug.Log("Entro en Case para activar escena entrada");
                     if (num_Escena == 1)
                     {
-
+                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
                         SceneManager.LoadScene("Calle");
+                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
                     } else if(num_Escena == 2) 
                     {
+                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
                         SceneManager.LoadScene("Patio_Inferior");
+                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
                     }
                     
                     break;
                 case "Patio_Inferior":
                     if (num_Escena == 1)
                     {
+                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
                         SceneManager.LoadScene("Entrada");
+                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
                     }
                     else if (num_Escena == 2)
                     {
+                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
                         SceneManager.LoadScene("Patio_Superior");
+                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
                     }
 
                     break;
@@ -82,6 +89,7 @@ public class Cambio_Escena : MonoBehaviour
                     if (num_Escena == 4)
                     {
                         SceneManager.LoadScene("Patio_Superior");
+
                     }
                     else if (num_Escena == 5)
                     {

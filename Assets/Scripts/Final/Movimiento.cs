@@ -10,10 +10,10 @@ public enum Direccion
 
 public enum Animacion
 {
-    M_Andar_Arriba,
-    M_Andar_Abajo,
-    M_Andar_Izquierda,
-    M_Andar_Derecha,
+    Andando_Arriba,
+    Andando_Abajo,
+    Andando_Izquierda,
+    Andando_Derecha,
     Parado_Arriba,
     Parado_Abajo,
     Parado_Izquierda,

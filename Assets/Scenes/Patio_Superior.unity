@@ -69197,7 +69197,8 @@ PrefabInstance:
       value: VolverMenuPrincipal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7621705894157936451, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}

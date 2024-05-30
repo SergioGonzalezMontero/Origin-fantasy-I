@@ -20493,7 +20493,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1112764917
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -323683018, guid: 9fb76e327c739f74f9900d92de336332, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -22825,7 +22825,8 @@ PrefabInstance:
       value: VolverMenuPrincipal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7621705894157936451, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
@@ -23895,7 +23896,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1112764917
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 674930672, guid: 97033f4045c46d14e83beff5497e9d18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

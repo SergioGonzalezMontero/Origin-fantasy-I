@@ -95,6 +95,7 @@ public class S_DialogoManager : MonoBehaviour
         {
             Debug.Log("New Speaker");
             speakerActual = speaker;
+            dialUI.ActualizarTextos(0);
         }
         else
         {

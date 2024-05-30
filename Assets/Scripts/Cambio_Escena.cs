@@ -2,13 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Cambio_Escena : MonoBehaviour
 {
     public int num_Escena;
 
+    public Image imagenTransicion;
+    public float duracionDesvanecimiento = 1f;
+
+    private void Awake()
+    {
+        if (imagenTransicion != null)
+        {
+            imagenTransicion.color = new Color(0, 0, 0, 0);
+            imagenTransicion.gameObject.SetActive(true);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Entro en colision para escena:");
@@ -39,48 +53,57 @@ public class Cambio_Escena : MonoBehaviour
             {
                 
                 case "Calle":
-                    Debug.Log("Entro en Case para activar escena calle");
-                    SceneManager.LoadScene("Entrada");
+                    //Debug.Log("Entro en Case para activar escena calle");
+                    //SceneManager.LoadScene("Entrada");
+
+                    StartCoroutine(DesvanecerYTransicionar("Entrada"));
 
                     break;
                 case "Entrada":
                     Debug.Log("Entro en Case para activar escena entrada");
                     if (num_Escena == 1)
                     {
-                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        SceneManager.LoadScene("Calle");
-                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
+                        //SceneManager.LoadScene("Calle");
+                        //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        StartCoroutine(DesvanecerYTransicionar("Calle"));
+
                     } else if(num_Escena == 2) 
                     {
-                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        SceneManager.LoadScene("Patio_Inferior");
-                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
+                        //SceneManager.LoadScene("Patio_Inferior");
+                        //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        StartCoroutine(DesvanecerYTransicionar("Patio_Inferior"));
                     }
                     
                     break;
                 case "Patio_Inferior":
                     if (num_Escena == 1)
                     {
-                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        SceneManager.LoadScene("Entrada");
-                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
+                        //SceneManager.LoadScene("Entrada");
+                        //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        StartCoroutine(DesvanecerYTransicionar("Entrada"));
                     }
                     else if (num_Escena == 2)
                     {
-                        StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        SceneManager.LoadScene("Patio_Superior");
-                        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
+                        //SceneManager.LoadScene("Patio_Superior");
+                        //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        StartCoroutine(DesvanecerYTransicionar("Patio_Superior"));
                     }
 
                     break;
                 case "Patio_Superior":
                     if (num_Escena == 1)
                     {
-                        SceneManager.LoadScene("Patio_Inferior");
+                        //SceneManager.LoadScene("Patio_Inferior");
+                        StartCoroutine(DesvanecerYTransicionar("Patio_Inferior"));
                     }
                     else if (num_Escena == 2)
                     {
-                        SceneManager.LoadScene("EdificioC_P0");
+                        //SceneManager.LoadScene("EdificioC_P0");
+                        StartCoroutine(DesvanecerYTransicionar("EdificioC_P0"));
                     }
 
                     break;
@@ -104,5 +127,51 @@ public class Cambio_Escena : MonoBehaviour
             
             
         }
+    }
+
+    public void TransicionarAEscena(string nombreEscena)
+    {
+        StartCoroutine(DesvanecerYTransicionar(nombreEscena));
+    }
+
+    private IEnumerator DesvanecerYTransicionar(string nombreEscena)
+    {
+        yield return StartCoroutine(Desvanecer());
+        SceneManager.LoadScene(nombreEscena);
+        yield return StartCoroutine(Aclarar());
+    }
+
+    private IEnumerator Desvanecer()
+    {
+        float tiempoTranscurrido = 0f;
+        Color color = imagenTransicion.color;
+
+        while (tiempoTranscurrido < duracionDesvanecimiento)
+        {
+            tiempoTranscurrido += Time.deltaTime;
+            color.a = Mathf.Clamp01(tiempoTranscurrido / duracionDesvanecimiento);
+            imagenTransicion.color = color;
+            yield return null;
+        }
+
+        color.a = 1f;
+        imagenTransicion.color = color;
+    }
+
+    private IEnumerator Aclarar()
+    {
+        float tiempoTranscurrido = 0f;
+        Color color = imagenTransicion.color;
+
+        while (tiempoTranscurrido < duracionDesvanecimiento)
+        {
+            tiempoTranscurrido += Time.deltaTime;
+            color.a = 1f - Mathf.Clamp01(tiempoTranscurrido / duracionDesvanecimiento);
+            imagenTransicion.color = color;
+            yield return null;
+        }
+
+        color.a = 0f;
+        imagenTransicion.color = color;
     }
 }

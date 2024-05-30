@@ -1562,6 +1562,10 @@ PrefabInstance:
       propertyPath: num_Escena
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 530077448096678516, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
+      propertyPath: imagenTransicion
+      value: 
+      objectReference: {fileID: 333423857}
     - target: {fileID: 1937677947605731367, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
       propertyPath: m_Size.x
       value: 9.849264
@@ -6855,6 +6859,10 @@ PrefabInstance:
       propertyPath: num_Escena
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 530077448096678516, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
+      propertyPath: imagenTransicion
+      value: 
+      objectReference: {fileID: 333423857}
     - target: {fileID: 1937677947605731367, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
       propertyPath: m_Size.x
       value: 6.6486225

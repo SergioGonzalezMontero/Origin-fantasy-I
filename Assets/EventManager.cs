@@ -80,6 +80,9 @@ public class EventManager : MonoBehaviour
                     manuel_pasar[i].SetActive(false);
                 }
                 break;
+            default:
+                Debug.Log("Ningún evento");
+                break;
         }
     }
 

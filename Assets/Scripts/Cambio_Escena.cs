@@ -123,8 +123,34 @@ public class Cambio_Escena : MonoBehaviour
                     }
 
                     break;
+
+                case "EdificioC_C0":
+                    
+                        SceneManager.LoadScene("Pasillo_Inferior");
+
+                    
+
+                    break;
+
+                case "Pasillo_Superior":
+                    if (num_Escena == 4)
+                    {
+                        SceneManager.LoadScene("Patio_Superior");
+
+                    }
+                    else if (num_Escena == 5)
+                    {
+                        SceneManager.LoadScene("EdificioC_C1");
+                    }
+                    else if (num_Escena == 6)
+                    {
+                        SceneManager.LoadScene("EdificioC_P1");
+                    }
+
+                    break;
             }
             
+
             
         }
     }

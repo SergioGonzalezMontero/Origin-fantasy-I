@@ -28,11 +28,11 @@ public class LevelManager : MonoBehaviour
     }
     public void Start()
     {
-        for (int a = 0; a < restart.Length; a++)
+        for (int i = 0; i < restart.Length; i++)
         {
-            conversacion[a].desbloqueada = restart[a].desbloqueada;
-            conversacion[a].finalizado = restart[a].finalizado;
-            conversacion[a].reUsar = restart[a].reUsar;
+            conversacion[i].desbloqueada = restart[i].desbloqueada;
+            conversacion[i].finalizado = restart[i].finalizado;
+            conversacion[i].reUsar = restart[i].reUsar;
         }
         if(GameManager.Instance.niveles[nivelNum])
         {

@@ -11,7 +11,8 @@ public class MecanicaPI : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        moveDirection = -lastMoveDirection;
+        rb.velocity = moveDirection * speed;
     }
 
     void Update()
@@ -71,8 +72,8 @@ public class MecanicaPI : MonoBehaviour
 
     void OnEnable()
     {
-        moveDirection = -lastMoveDirection;
-        rb.velocity = moveDirection * speed;
+        rb = GetComponent<Rigidbody2D>();
+       
     }
 }
 

@@ -38,17 +38,19 @@ public class S_DialogoUI : MonoBehaviour
         convContainer.SetActive(true);
 
 
-        continuarBoton.gameObject.SetActive(true);
-        anteriorBoton.gameObject.SetActive(false);
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      //  if(Input.GetKeyDown(KeyCode.Q))
-      //  {
-      //      ActualizarTextos(1);
-      //  }
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            ActualizarTextos(1);
+        }
+        
     }
 
     public void ActualizarTextos(int comportamiento)
@@ -96,6 +98,7 @@ public class S_DialogoUI : MonoBehaviour
                 nombre.text = conversacion.dialogos[localIn].personaje.nombre;
                 StopAllCoroutines();
                 StartCoroutine(EscribirTexto());
+       
 
                 if (conversacion.dialogos[localIn].personaje != null)
                     speakIm.sprite = conversacion.dialogos[localIn].personaje.imagen;

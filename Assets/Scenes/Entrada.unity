@@ -6599,6 +6599,17 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6170515264012770978, guid: dfd011232ea9a0c48a97f49327268029, type: 3}
   m_PrefabInstance: {fileID: 5439175028351909750}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &681648338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 832226752785568239, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+  m_PrefabInstance: {fileID: 6734823364358691593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &705034361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4440791872987630100, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
@@ -6842,6 +6853,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &956308345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6816505171639951771, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+  m_PrefabInstance: {fileID: 6734823364358691593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1045889160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
@@ -60163,6 +60185,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3909520042856065197, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: anteriorBoton
+      value: 
+      objectReference: {fileID: 681648338}
+    - target: {fileID: 3909520042856065197, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: continuarBoton
+      value: 
+      objectReference: {fileID: 956308345}
     - target: {fileID: 4598083406212960039, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -60335,6 +60365,42 @@ PrefabInstance:
       propertyPath: transicionOscura
       value: 
       objectReference: {fileID: 333423857}
+    - target: {fileID: 8317478410616389208, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000045270326
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.003435346
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 224.8001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -42.0006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424081650500762976, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.394
+      objectReference: {fileID: 0}
     - target: {fileID: 8965977518301022390, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 150

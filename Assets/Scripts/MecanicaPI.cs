@@ -3,7 +3,6 @@ using UnityEngine;
 public class MecanicaPI : MonoBehaviour
 {
     public float speed = 10f; // Velocidad de movimiento del personaje
-    public LayerMask obstacleMask; // Capa que representa las paredes
 
     private Rigidbody2D rb;
     private Vector2 moveDirection = Vector2.zero; // Dirección actual de movimiento
@@ -17,29 +16,44 @@ public class MecanicaPI : MonoBehaviour
 
     void Update()
     {
+        if (rb.velocity == Vector2.zero)
+        {
+            canMove = true;
+        }
+
         // Si el personaje puede moverse y se presiona una tecla de dirección
-        if (canMove && (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
-                        Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)))
+        if (canMove && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) ||
+                        Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
             // Obtener la dirección de movimiento basada en la tecla presionada
-            moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
-            // Normalizar la dirección para mantener la misma velocidad en diagonal
-            moveDirection.Normalize();
-
-            // Guardar la última dirección de movimiento
-            
+            // Solo permitir movimiento horizontal si no hay entrada vertical
+            if (Mathf.Abs(horizontalInput) > Mathf.Abs(verticalInput))
+            {
+                moveDirection = new Vector2(Mathf.Round(horizontalInput), 0f);
+            }
+            // Solo permitir movimiento vertical si no hay entrada horizontal
+            else
+            {
+                moveDirection = new Vector2(0f, Mathf.Round(verticalInput));
+            }
 
             // Mover al personaje en la dirección especificada
             rb.velocity = moveDirection * speed;
+
+            // No permitir que se cambie la dirección del personaje mientras este se está moviendo
+            canMove = false;
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Si el personaje colisiona con una pared (la capa de la colisión está en obstacleMask)
-        if (obstacleMask == (obstacleMask | (1 << collision.gameObject.layer)))
+        // Si el personaje colisiona con un objeto con el tag "obs"
+        if (collision.gameObject.tag == "obs")
         {
+            Debug.Log("COLISION CON OBS");
             // Detener el movimiento del personaje
             rb.velocity = Vector2.zero;
 
@@ -61,4 +75,6 @@ public class MecanicaPI : MonoBehaviour
         rb.velocity = moveDirection * speed;
     }
 }
+
+
 

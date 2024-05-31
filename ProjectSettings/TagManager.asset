@@ -8,6 +8,7 @@ TagManager:
   - Enemigo
   - Tocar
   - NPC
+  - obs
   layers:
   - Default
   - TransparentFX

@@ -22888,6 +22888,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
   m_PrefabInstance: {fileID: 712890579}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &712890584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7624193200749419371, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+  m_PrefabInstance: {fileID: 712890579}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &712890586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98849,6 +98860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530077448096678516, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
+      propertyPath: imagenTransicion
+      value: 
+      objectReference: {fileID: 712890584}
     - target: {fileID: 1937677947605731367, guid: d59282a06d6dc8a42a6a9b0ca70f62bf, type: 3}
       propertyPath: m_Size.y
       value: 1.7947464

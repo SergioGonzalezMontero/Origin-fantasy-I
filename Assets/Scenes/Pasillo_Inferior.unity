@@ -3430,11 +3430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4509057767543985792, guid: dfd011232ea9a0c48a97f49327268029, type: 3}
       propertyPath: m_UseAutoMass
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4509057767543985792, guid: dfd011232ea9a0c48a97f49327268029, type: 3}
       propertyPath: m_CollisionDetection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4546427426418547143, guid: dfd011232ea9a0c48a97f49327268029, type: 3}
       propertyPath: m_Enabled

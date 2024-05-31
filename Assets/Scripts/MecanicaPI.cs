@@ -8,6 +8,7 @@ public class MecanicaPI : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveDirection = Vector2.zero; // Dirección actual de movimiento
     private bool canMove = true; // Indica si el personaje puede moverse o no
+    private Vector2 lastMoveDirection; // Última dirección de movimiento
 
     void Start()
     {
@@ -26,6 +27,9 @@ public class MecanicaPI : MonoBehaviour
             // Normalizar la dirección para mantener la misma velocidad en diagonal
             moveDirection.Normalize();
 
+            // Guardar la última dirección de movimiento
+            
+
             // Mover al personaje en la dirección especificada
             rb.velocity = moveDirection * speed;
         }
@@ -33,8 +37,8 @@ public class MecanicaPI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Si el personaje colisiona con una pared
-        if (collision.gameObject.layer == obstacleMask)
+        // Si el personaje colisiona con una pared (la capa de la colisión está en obstacleMask)
+        if (obstacleMask == (obstacleMask | (1 << collision.gameObject.layer)))
         {
             // Detener el movimiento del personaje
             rb.velocity = Vector2.zero;
@@ -43,4 +47,18 @@ public class MecanicaPI : MonoBehaviour
             canMove = true;
         }
     }
+
+    void OnDisable()
+    {
+        lastMoveDirection = moveDirection;
+        moveDirection = Vector2.zero;
+        rb.velocity = Vector2.zero;
+    }
+
+    void OnEnable()
+    {
+        moveDirection = -lastMoveDirection;
+        rb.velocity = moveDirection * speed;
+    }
 }
+

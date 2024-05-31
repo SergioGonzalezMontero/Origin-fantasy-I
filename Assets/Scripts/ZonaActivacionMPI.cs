@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 
-public class ZoneTrigger : MonoBehaviour
+public class ZonaActivacionMPI : MonoBehaviour
 {
     public Per_Movimiento movementScript1;
     public MecanicaPI movementScript2;
@@ -11,22 +11,16 @@ public class ZoneTrigger : MonoBehaviour
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
+       
             movementScript1 = player.GetComponent<Per_Movimiento>();
             movementScript2 = player.GetComponent<MecanicaPI>();
-        }
-        else
-        {
-            Debug.LogError("No se pudo encontrar un GameObject con la etiqueta 'Player'");
-        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(DisableColliderTemporarily());
+            //StartCoroutine(DisableColliderTemporarily());
 
             entraOsale++;
             if (entraOsale % 2 == 0)
@@ -44,12 +38,12 @@ public class ZoneTrigger : MonoBehaviour
             Debug.Log("El número es: " + entraOsale);
 
             // Reposiciona al jugador al lado opuesto del collider
-            RepositionPlayer(other);
+            //RepositionPlayer(other);
 
         }
     }
 
-    void RepositionPlayer(Collider2D playerCollider)
+    /*void RepositionPlayer(Collider2D playerCollider)
     {
         // Obtenemos los límites del collider de la zona
         Bounds bounds = GetComponent<Collider2D>().bounds;
@@ -89,7 +83,7 @@ public class ZoneTrigger : MonoBehaviour
         {
             Debug.LogError("No se encontró el Collider2D en el GameObject.");
         }
-    }
+    }*/
 }
 
 

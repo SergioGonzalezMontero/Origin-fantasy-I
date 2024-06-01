@@ -103,7 +103,7 @@ public class Cambio_Escena : MonoBehaviour
                     else if (num_Escena == 2)
                     {
                         //SceneManager.LoadScene("EdificioC_P0");
-                        StartCoroutine(DesvanecerYTransicionar("Pasillo_Inferior"));
+                        StartCoroutine(DesvanecerYTransicionar("EdificioC_C0"));
                     }
 
                     break;

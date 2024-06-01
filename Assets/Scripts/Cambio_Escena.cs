@@ -52,100 +52,103 @@ public class Cambio_Escena : MonoBehaviour
             switch (SceneManager.GetActiveScene().name.ToString())
             {
                 
-                case "Calle":
-                    //Debug.Log("Entro en Case para activar escena calle");
-                    //SceneManager.LoadScene("Entrada");
+                case "0. Calle":
+                    //Debug.Log("Entro en Case para activar escena 0. Calle");
+                    //SceneManager.LoadScene("1. Entrada");
 
-                    StartCoroutine(DesvanecerYTransicionar("Entrada"));
+                    StartCoroutine(DesvanecerYTransicionar("1. Entrada"));
 
                     break;
-                case "Entrada":
-                    Debug.Log("Entro en Case para activar escena entrada");
+                case "1. Entrada":
+                    Debug.Log("Entro en Case para activar escena 1. Entrada");
                     if (num_Escena == 1)
                     {
                         //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        //SceneManager.LoadScene("Calle");
+                        //SceneManager.LoadScene("0. Calle");
                         //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
-                        StartCoroutine(DesvanecerYTransicionar("Calle"));
+                        StartCoroutine(DesvanecerYTransicionar("0. Calle"));
 
                     } else if(num_Escena == 2) 
                     {
                         //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        //SceneManager.LoadScene("Patio_Inferior");
+                        //SceneManager.LoadScene("2. Patio_Inferior");
                         //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
-                        StartCoroutine(DesvanecerYTransicionar("Patio_Inferior"));
+                        StartCoroutine(DesvanecerYTransicionar("2. Patio_Inferior"));
                     }
                     
                     break;
-                case "Patio_Inferior":
+                case "2. Patio_Inferior":
                     if (num_Escena == 1)
                     {
                         //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        //SceneManager.LoadScene("Entrada");
+                        //SceneManager.LoadScene("1. Entrada");
                         //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
-                        StartCoroutine(DesvanecerYTransicionar("Entrada"));
+                        StartCoroutine(DesvanecerYTransicionar("1. Entrada"));
                     }
                     else if (num_Escena == 2)
                     {
                         //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
-                        //SceneManager.LoadScene("Patio_Superior");
+                        //SceneManager.LoadScene("3. Patio_Superior");
                         //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
-                        StartCoroutine(DesvanecerYTransicionar("Patio_Superior"));
+                        StartCoroutine(DesvanecerYTransicionar("3. Patio_Superior"));
                     }
 
                     break;
-                case "Patio_Superior":
+                case "3. Patio_Superior":
                     if (num_Escena == 1)
                     {
-                        //SceneManager.LoadScene("Patio_Inferior");
-                        StartCoroutine(DesvanecerYTransicionar("Patio_Inferior"));
+                        //SceneManager.LoadScene("2. Patio_Inferior");
+                        StartCoroutine(DesvanecerYTransicionar("2. Patio_Inferior"));
                     }
                     else if (num_Escena == 2)
                     {
                         //SceneManager.LoadScene("EdificioC_P0");
-                        StartCoroutine(DesvanecerYTransicionar("EdificioC_C0"));
+                        StartCoroutine(DesvanecerYTransicionar("4. Pasillo_Inferior"));
                     }
 
                     break;
 
-                case "Pasillo_Inferior":
-                    if (num_Escena == 4)
+                case "4. Pasillo_Inferior":
+                    if (num_Escena == 1)
                     {
-                        SceneManager.LoadScene("Patio_Superior");
+                      //  SceneManager.LoadScene("3. Patio_Superior");
+                        StartCoroutine(DesvanecerYTransicionar("3. Patio_Superior"));
 
                     }
-                    else if (num_Escena == 5)
+                    else if (num_Escena == 2)
                     {
-                        SceneManager.LoadScene("EdificioC_C1");
-                    }else if (num_Escena == 6)
+                       // SceneManager.LoadScene("5. EdificioC_C0");
+                        StartCoroutine(DesvanecerYTransicionar("5. EdificioC_C0"));
+                    }
+                    else if (num_Escena == 3)
                     {
-                        SceneManager.LoadScene("EdificioC_P1");
+                        //SceneManager.LoadScene("6. Pasillo_Superior");
+                        StartCoroutine(DesvanecerYTransicionar("6. Pasillo_Superior"));
                     }
 
                     break;
 
-                case "EdificioC_C0":
-                    
-                        //SceneManager.LoadScene("Pasillo_Inferior");
+                case "5. EdificioC_C0":
 
-                    
+                    //SceneManager.LoadScene("4. Pasillo_Inferior");
+                    StartCoroutine(DesvanecerYTransicionar("4. Pasillo_Inferior"));
+
 
                     break;
 
-                case "Pasillo_Superior":
-                    if (num_Escena == 4)
+                case "6. Pasillo_Superior":
+                    if (num_Escena == 1)
                     {
-                        SceneManager.LoadScene("Patio_Superior");
+                        //SceneManager.LoadScene("4. Pasillo_Inferior");
+                        StartCoroutine(DesvanecerYTransicionar("4. Pasillo_Inferior"));
 
                     }
-                    else if (num_Escena == 5)
+                    else if (num_Escena == 2)
                     {
-                        SceneManager.LoadScene("EdificioC_C1");
+                        //SceneManager.LoadScene("7. EdificioC_C1");
+                        StartCoroutine(DesvanecerYTransicionar("7. EdificioC_C1"));
                     }
-                    else if (num_Escena == 6)
-                    {
-                        SceneManager.LoadScene("EdificioC_P1");
-                    }
+
 
                     break;
             }

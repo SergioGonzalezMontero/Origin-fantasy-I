@@ -47,7 +47,7 @@ public class MenuPause : MonoBehaviour
     {
         // Reanudamos el tiempo antes de cambiar de escena
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("-. MenuPrincipal");
     }
 
     public void VolverAlJuego()

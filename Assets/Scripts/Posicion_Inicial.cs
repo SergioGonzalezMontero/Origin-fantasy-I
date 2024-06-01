@@ -18,12 +18,12 @@ public class Posicion_Inicial : MonoBehaviour
         Debug.Log(escenaAnterior);
         switch (escenaAnterior)
         {
-            case "Calle":
+            case "0. Calle":
                 transform.position = Inicio1.position;
                 GameManager.Instance.ComienzoJuego = false;
                 break;
-            case "Entrada":
-                if (SceneManager.GetActiveScene().name.ToString().Equals("Calle"))
+            case "1. Entrada":
+                if (SceneManager.GetActiveScene().name.ToString().Equals("0. Calle"))
                 {
                     
                     if (GameManager.Instance.ComienzoJuego)
@@ -36,55 +36,56 @@ public class Posicion_Inicial : MonoBehaviour
                         transform.position = Inicio2.position;
                     }
                 }
-                else if (SceneManager.GetActiveScene().name.ToString().Equals("Patio_Inferior"))
+                else if (SceneManager.GetActiveScene().name.ToString().Equals("2. Patio_Inferior"))
                 {
                     transform.position = Inicio1.position;
                 }
                 break;
-            case "Patio_Inferior":
+            case "2. Patio_Inferior":
 
-                if (SceneManager.GetActiveScene().name.ToString().Equals("Entrada"))
+                if (SceneManager.GetActiveScene().name.ToString().Equals("1. Entrada"))
                 {
                     transform.position = Inicio2.position;
                 }
-                else if (SceneManager.GetActiveScene().name.ToString().Equals("Patio_Superior"))
+                else if (SceneManager.GetActiveScene().name.ToString().Equals("3. Patio_Superior"))
                 {
                     transform.position = Inicio1.position;
                     
                 }
                 break;
-            case "Patio_Superior":
-                if (SceneManager.GetActiveScene().name.ToString().Equals("Patio_Inferior"))
+            case "3. Patio_Superior":
+                if (SceneManager.GetActiveScene().name.ToString().Equals("2. Patio_Inferior"))
                 {
                     transform.position = Inicio2.position;
                 }
-                else if (SceneManager.GetActiveScene().name.ToString().Equals("EdificioC_P0"))
+                else if (SceneManager.GetActiveScene().name.ToString().Equals("4. Pasillo_Inferior"))
                 {
                     transform.position = Inicio1.position;
                 }
                 break;
-            case "EdificioC_P0":
-                if (SceneManager.GetActiveScene().name.ToString().Equals("Patio_Superior"))
+            case "4. Pasillo_Inferior":
+                if (SceneManager.GetActiveScene().name.ToString().Equals("3. Patio_Superior"))
                 {
                     transform.position = Inicio2.position;
-                }else if (SceneManager.GetActiveScene().name.ToString().Equals("EdificioC_C0"))
+                }else if (SceneManager.GetActiveScene().name.ToString().Equals("5. EdificioC_C0"))
                 {
                     transform.position = Inicio1.position;
-                }else if (SceneManager.GetActiveScene().name.ToString().Equals("EdificioC_P1"))
+                }else if (SceneManager.GetActiveScene().name.ToString().Equals("6. Pasillo_Superior"))
                 {
                     transform.position = Inicio1.position;
                 }
                 break;
-            case "EdificioC_C0":
-                //transform.position = Inicio1.position;
+            case "5. EdificioC_C0":
+                Debug.Log("Entro en clase bien");
+                transform.position = Inicio1.position;
 
                 break;
-            case "EdificioC_P1":
-                if (SceneManager.GetActiveScene().name.ToString().Equals("EdificioC_P0"))
+            case "6. Pasillo_Superior":
+                if (SceneManager.GetActiveScene().name.ToString().Equals("4. Pasillo_Inferior"))
                 {
                     transform.position = Inicio3.position;
                 }
-                else if (SceneManager.GetActiveScene().name.ToString().Equals("EdificioC_C1"))
+                else if (SceneManager.GetActiveScene().name.ToString().Equals("7. EdificioC_C1"))
                 {
                     transform.position = Inicio1.position;
                 }

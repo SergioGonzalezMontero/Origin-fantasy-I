@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject pantallaMuerte;
 
+    private int nota = 10;
+
 
 
 
@@ -39,6 +41,13 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GameOver");
         vidas = 0;
+        
+        
+        if (nota > 0)
+        {
+            nota--;
+        }
+        Debug.Log("Baja la nota, nota actual: " + nota);
 
         pantallaMuerte.SetActive(true);
         Time.timeScale = 0f;

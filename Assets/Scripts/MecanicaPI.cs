@@ -8,9 +8,12 @@ public class MecanicaPI : MonoBehaviour
     private Vector2 moveDirection = Vector2.zero; // Dirección actual de movimiento
     private bool canMove = true; // Indica si el personaje puede moverse o no
     private Vector2 lastMoveDirection; // Última dirección de movimiento
+    private Animator anim; // Componente Animator para controlar las animaciones
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();// Obtener el componente Animator
         moveDirection = -lastMoveDirection;
         rb.velocity = moveDirection * speed;
     }
@@ -20,11 +23,14 @@ public class MecanicaPI : MonoBehaviour
         if (rb.velocity == Vector2.zero)
         {
             canMove = true;
+            //anim.SetBool("Parado",false); // Detener la animación de movimiento
         }
 
         // Si el personaje puede moverse y se presiona una tecla de dirección
         if (canMove && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) ||
-                        Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
+                        Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
+                        Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) ||
+                        Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
         {
             // Obtener la dirección de movimiento basada en la tecla presionada
             float horizontalInput = Input.GetAxis("Horizontal");
@@ -46,6 +52,27 @@ public class MecanicaPI : MonoBehaviour
 
             // No permitir que se cambie la dirección del personaje mientras este se está moviendo
             canMove = false;
+
+            //Cambio la animacion del personaje segun la direccion seleccionada
+            if (horizontalInput > 0)
+            {
+                anim.SetInteger("Direccion", 1);
+
+            }
+            else if (horizontalInput < 0)
+            {
+                anim.SetInteger("Direccion", 3);
+            }
+
+            if (verticalInput > 0)
+            {
+                anim.SetInteger("Direccion", 0);
+
+            }
+            else if (verticalInput < 0)
+            {
+                anim.SetInteger("Direccion", 2);
+            }
         }
     }
 
@@ -73,9 +100,5 @@ public class MecanicaPI : MonoBehaviour
     void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
-       
     }
 }
-
-
-

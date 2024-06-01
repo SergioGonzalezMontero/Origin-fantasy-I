@@ -76,7 +76,7 @@ public class Posicion_Inicial : MonoBehaviour
                 }
                 break;
             case "EdificioC_C0":
-                transform.position = Inicio2.position;
+                transform.position = Inicio1.position;
 
                 break;
             case "EdificioC_P1":

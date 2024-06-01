@@ -126,7 +126,7 @@ public class Cambio_Escena : MonoBehaviour
 
                 case "EdificioC_C0":
                     
-                        SceneManager.LoadScene("Pasillo_Inferior");
+                        //SceneManager.LoadScene("Pasillo_Inferior");
 
                     
 

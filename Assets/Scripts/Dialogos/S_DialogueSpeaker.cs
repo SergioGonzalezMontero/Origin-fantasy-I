@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class S_DialogueSpeaker : MonoBehaviour
 {
-    static int contador = 0;
     public List<Conversacion> conversacionesDisponibles = new List<Conversacion>();
 
     [SerializeField]

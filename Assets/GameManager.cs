@@ -37,7 +37,13 @@ public class GameManager : MonoBehaviour
             
         DontDestroyOnLoad(this);
     }
-    public void GameOver()
+
+    public GameObject GetPantallaMuerte()
+    {
+        return pantallaMuerte;
+    }
+
+    public void GameOver(GameObject pantallaMuerte)
     {
         Debug.Log("GameOver");
         vidas = 0;
@@ -48,7 +54,6 @@ public class GameManager : MonoBehaviour
             nota--;
         }
         Debug.Log("Baja la nota, nota actual: " + nota);
-
         pantallaMuerte.SetActive(true);
         Time.timeScale = 0f;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

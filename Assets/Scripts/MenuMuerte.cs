@@ -19,11 +19,9 @@ public class MenuMuerte : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(GameManager.Instance.vidas);
         if (GameManager.Instance != null && GameManager.Instance.vidas <= 0)
         {
 
-            Debug.Log("Intento lanzar pantalla muerte");
             PantallaMuerte();
         }
         else if (GameManager.Instance == null)
@@ -34,7 +32,6 @@ public class MenuMuerte : MonoBehaviour
 
     public void PantallaMuerte()
     {
-        Debug.Log("Entro en pantalla muerte");
         if (!muerto)
         {
             Debug.Log("Entro a lanzar la pantalla");

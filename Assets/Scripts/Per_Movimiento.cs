@@ -128,7 +128,7 @@ public class Per_Movimiento : MonoBehaviour
         if (GameManager.Instance.vidas <= 0)
         {
             
-            GameManager.Instance.GameOver();
+            GameManager.Instance.GameOver(GameManager.Instance.GetPantallaMuerte());
         }
         Debug.Log("Player life change: " + GameManager.Instance.vidas);
     }

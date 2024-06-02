@@ -68,7 +68,7 @@ public class Coche : MonoBehaviour
     {
         Debug.Log("matao");
         StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
-        GameManager.Instance.GameOver();
+        GameManager.Instance.GameOver(GameManager.Instance.GetPantallaMuerte());
     }
 
     }

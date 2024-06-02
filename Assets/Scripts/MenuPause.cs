@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuPause : MonoBehaviour
 {
     public GameObject pantallaPausa;
     private bool pausado = false;  // Inicializamos pausado como false
+    public TextMeshProUGUI textoNota;
 
     void Start()
     {
@@ -31,6 +33,7 @@ public class MenuPause : MonoBehaviour
 
         if (pausado)
         {
+            textoNota.SetText("La nota actual es: "+GameManager.Instance.nota);
             pantallaPausa.SetActive(true);  // Activamos el menú de pausa
             Time.timeScale = 0f;  // Pausamos el juego
             Debug.Log("Juego pausado y menú de pausa activado");

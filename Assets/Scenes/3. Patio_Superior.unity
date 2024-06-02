@@ -69239,6 +69239,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7513827388701288940, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
   m_PrefabInstance: {fileID: 1422546969}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1422546973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7790453063241890236, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+  m_PrefabInstance: {fileID: 1422546969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1423491190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71883,6 +71894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pantallaPausa: {fileID: 1667136595}
+  textoNota: {fileID: 1422546973}
 --- !u!114 &1718774182
 MonoBehaviour:
   m_ObjectHideFlags: 0

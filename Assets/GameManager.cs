@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject pantallaMuerte;
 
-    private int nota = 10;
+    public int nota = 10;
 
 
    // public void Update()

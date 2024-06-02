@@ -16,7 +16,7 @@ public class MenuPause : MonoBehaviour
     {
 
             // Detecta si se ha presionado la tecla Escape
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape)&&GameManager.Instance.vidas>0)
             {
                 Debug.Log("Pulso botón esc");
                 TogglePause();

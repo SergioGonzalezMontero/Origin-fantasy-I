@@ -130,7 +130,7 @@ public class Per_Movimiento : MonoBehaviour
             
             GameManager.Instance.GameOver(GameManager.Instance.GetPantallaMuerte());
         }
-        Debug.Log("Player life change: " + GameManager.Instance.vidas);
+        
     }
 
     IEnumerator damage()

@@ -20,7 +20,13 @@ public class GameManager : MonoBehaviour
     private int nota = 10;
 
 
-
+   // public void Update()
+   // {
+   //     if (vidas > 0)
+   //     {
+   //         pantallaMuerte.SetActive(false);
+   //     }
+   // }
 
     private void Awake()
     {
@@ -54,7 +60,11 @@ public class GameManager : MonoBehaviour
             nota--;
         }
         Debug.Log("Baja la nota, nota actual: " + nota);
-        pantallaMuerte.SetActive(true);
+        if (pantallaMuerte != null)
+        {
+            pantallaMuerte.SetActive(true);
+        }
+            
         Time.timeScale = 0f;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

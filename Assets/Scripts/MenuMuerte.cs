@@ -6,25 +6,29 @@ using UnityEngine.SceneManagement;
 public class MenuMuerte : MonoBehaviour
 {
     public GameObject pantallaMuerte;
-    private bool muerto = false;  // Inicializamos pausado como false
-    private GameObject UI;
+    private bool muerto = false;  // Inicializamos como false
 
     void Start()
     {
-        // Aseguramos que el menú de pausa esté desactivado al inicio
-        pantallaMuerte.SetActive(true);
+        // Aseguramos que la pantalla de muerte esté desactivada al inicio
         pantallaMuerte.SetActive(false);
         Debug.Log("Entro en script muerte");
     }
 
     void Update()
     {
-        if (GameManager.Instance != null && GameManager.Instance.vidas <= 0)
+        if (GameManager.Instance != null)
         {
+            if (GameManager.Instance.vidas <= 0)
+            {
+                if (!muerto)
+                {
+                    PantallaMuerte();
+                }
 
-            PantallaMuerte();
+            }
         }
-        else if (GameManager.Instance == null)
+        else
         {
             Debug.LogError("GameManager.Instance es null");
         }
@@ -38,7 +42,6 @@ public class MenuMuerte : MonoBehaviour
             muerto = true;  // Cambiamos el estado
             pantallaMuerte.SetActive(true);
             Debug.Log("se murio");
-            
             Time.timeScale = 0f;
         }
     }
@@ -46,19 +49,20 @@ public class MenuMuerte : MonoBehaviour
     public void VolverMenuPrincipal()
     {
         // Reanudamos el tiempo antes de cambiar de escena
+        muerto = false;
         Time.timeScale = 1f;
+        pantallaMuerte.SetActive(false);
+        GameManager.Instance.vidas = 6;
         SceneManager.LoadScene("-. MenuPrincipal");
     }
 
     public void VolverAlJuego()
     {
         muerto = false;
-        pantallaMuerte.SetActive(false);  // Desactivamos el menú de pausa
+        pantallaMuerte.SetActive(false);  // Desactivamos la pantalla de muerte
         Time.timeScale = 1f;  // Reanudamos el juego
-        Debug.Log("Juego reanudado y menú de pausa desactivado");
+        Debug.Log("Juego reanudado y menú de muerte desactivado");
         GameManager.Instance.vidas = 6;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
     }
 }
-

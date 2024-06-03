@@ -102,7 +102,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,9 +121,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,9 +142,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,9 +163,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,9 +184,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,9 +205,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 160
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -226,9 +226,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 192
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -247,9 +247,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 224
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,9 +268,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -289,9 +289,9 @@ TextureImporter:
       name: animated_hospital_surgery_door_32x32_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 288
         y: 0
-        width: 64
+        width: 32
         height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -302,6 +302,216 @@ TextureImporter:
       bones: []
       spriteID: fb0b5d8fc0e2d6345afcc5f8939d7d94
       internalID: 578251559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887c051a4f92bf74d85b336fb46a81c8
+      internalID: -413738842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d78d194d3ad7049b4e4d31c781af9f
+      internalID: 1097729000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1336bcedf2c6a843822145678464360
+      internalID: -651331097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd8bc324029b66488de741902aa5f17
+      internalID: -1277294493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03ea3d7cd8988a4abb6fbbdfc36763e
+      internalID: -37598592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc86108660238d74e8bf6daa83086cc7
+      internalID: 1359041467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccde70fcb28e54844a486cff0ca4ff78
+      internalID: -620412125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908f9a40cd2760d4f84324420ebdb7c3
+      internalID: -1724320334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e438335276e6d0f468d631b5b4a0fea0
+      internalID: -1776699564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_hospital_surgery_door_32x32_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88ab18761c085741b00cbfeabce05ac
+      internalID: 1416470795
       vertices: []
       indices: 
       edges: []
@@ -319,6 +529,16 @@ TextureImporter:
     nameFileIdTable:
       animated_hospital_surgery_door_32x32_0: -638584310
       animated_hospital_surgery_door_32x32_1: -640210714
+      animated_hospital_surgery_door_32x32_10: -413738842
+      animated_hospital_surgery_door_32x32_11: 1097729000
+      animated_hospital_surgery_door_32x32_12: -651331097
+      animated_hospital_surgery_door_32x32_13: -1277294493
+      animated_hospital_surgery_door_32x32_14: -37598592
+      animated_hospital_surgery_door_32x32_15: 1359041467
+      animated_hospital_surgery_door_32x32_16: -620412125
+      animated_hospital_surgery_door_32x32_17: -1724320334
+      animated_hospital_surgery_door_32x32_18: -1776699564
+      animated_hospital_surgery_door_32x32_19: 1416470795
       animated_hospital_surgery_door_32x32_2: 1128532620
       animated_hospital_surgery_door_32x32_3: -1145832624
       animated_hospital_surgery_door_32x32_4: 2039066619

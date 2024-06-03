@@ -18,7 +18,7 @@ MonoBehaviour:
   dialogos:
   - personaje: {fileID: 11400000, guid: 16163db0674711449bd8ee60b2c50404, type: 2}
     sonido: {fileID: 0}
-    dialogo: "Hola, \xBFQu\xE9 tal? AAAAA"
+    dialogo: "Hola, \xBFQu\xE9 tal?"
   - personaje: {fileID: 11400000, guid: 16163db0674711449bd8ee60b2c50404, type: 2}
     sonido: {fileID: 0}
     dialogo: "Perdona, pero no puedes pasar.\nLos compa\xF1eros de mec\xE1nica han
@@ -31,3 +31,5 @@ MonoBehaviour:
     sonido: {fileID: 0}
     dialogo: "\xBFMe puedes traer la manguera, por favor?"
   pregunta: {fileID: 0}
+  Evento: 0
+  EventCode: 

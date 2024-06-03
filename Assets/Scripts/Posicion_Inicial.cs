@@ -77,7 +77,7 @@ public class Posicion_Inicial : MonoBehaviour
                 break;
             case "5. EdificioC_C0":
                 Debug.Log("Entro en clase bien");
-                transform.position = Inicio1.position;
+                transform.position = Inicio2.position;
 
                 break;
             case "6. Pasillo_Superior":

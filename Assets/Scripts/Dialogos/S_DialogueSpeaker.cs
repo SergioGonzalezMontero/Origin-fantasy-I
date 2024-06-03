@@ -148,6 +148,7 @@ public class S_DialogueSpeaker : MonoBehaviour
         }
         else
         {
+            conversacionesDisponibles[indexDeConversaciones].finalizado = false;
             return true;
         }
     }

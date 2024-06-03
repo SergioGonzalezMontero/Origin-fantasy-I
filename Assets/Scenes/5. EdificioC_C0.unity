@@ -695,6 +695,14 @@ PrefabInstance:
       propertyPath: conversacion
       value: 
       objectReference: {fileID: 11400000, guid: b7ca5d97ee7dbd74bbc488e359610ef7, type: 2}
+    - target: {fileID: 6508341780209987548, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483007747}
+    - target: {fileID: 6508341780209987548, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolverAlJuego
+      objectReference: {fileID: 0}
     - target: {fileID: 6580415249315781869, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_Name
       value: UI
@@ -787,6 +795,14 @@ PrefabInstance:
       propertyPath: transicion
       value: 
       objectReference: {fileID: 1898697387}
+    - target: {fileID: 9137273612503781049, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 483007747}
+    - target: {fileID: 9137273612503781049, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolverMenuPrincipal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

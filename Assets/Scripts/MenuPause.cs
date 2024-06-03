@@ -33,6 +33,8 @@ public class MenuPause : MonoBehaviour
 
         if (pausado)
         {
+            GameManager.Instance.musicaJuego.Pause();
+            GameManager.Instance.musicaPausa.Play();
             textoNota.SetText("La nota actual es: "+GameManager.Instance.nota);
             pantallaPausa.SetActive(true);  // Activamos el menú de pausa
             Time.timeScale = 0f;  // Pausamos el juego
@@ -40,6 +42,8 @@ public class MenuPause : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.musicaPausa.Pause();
+            GameManager.Instance.musicaJuego.Play();
             pantallaPausa.SetActive(false);  // Desactivamos el menú de pausa
             Time.timeScale = 1f;  // Reanudamos el juego
             Debug.Log("Juego reanudado y menú de pausa desactivado");

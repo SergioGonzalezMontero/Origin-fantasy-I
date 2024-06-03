@@ -19,14 +19,22 @@ public class GameManager : MonoBehaviour
 
     public int nota = 10;
 
+    public AudioSource musicaInicio;
 
-   // public void Update()
-   // {
-   //     if (vidas > 0)
-   //     {
-   //         pantallaMuerte.SetActive(false);
-   //     }
-   // }
+    public AudioSource musicaPausa;
+
+    public AudioSource musicaJuego;
+
+
+
+
+    // public void Update()
+    // {
+    //     if (vidas > 0)
+    //     {
+    //         pantallaMuerte.SetActive(false);
+    //     }
+    // }
 
     private void Awake()
     {

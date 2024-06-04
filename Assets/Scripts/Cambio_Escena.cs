@@ -55,8 +55,7 @@ public class Cambio_Escena : MonoBehaviour
                 case "0. Calle":
                     //Debug.Log("Entro en Case para activar escena 0. Calle");
                     //SceneManager.LoadScene("1. Entrada");
-                    if (GameManager.Instance.musicaJuego != null)
-                        GameManager.Instance.musicaJuego.Play();
+                    
                     StartCoroutine(DesvanecerYTransicionar("1. Entrada"));
 
                     break;

@@ -20761,6 +20761,10 @@ PrefabInstance:
       value: LevelManager
       objectReference: {fileID: 0}
     - target: {fileID: 4675410218505846189, guid: 21d6f940d04f9a94fa00597f52a89667, type: 3}
+      propertyPath: nivelNum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675410218505846189, guid: 21d6f940d04f9a94fa00597f52a89667, type: 3}
       propertyPath: managerUI
       value: 
       objectReference: {fileID: 712890580}
@@ -23193,11 +23197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2476840094938894665, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -53.242
+      value: -53.241943
       objectReference: {fileID: 0}
     - target: {fileID: 2476840094938894665, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -51.392
+      value: -51.391968
       objectReference: {fileID: 0}
     - target: {fileID: 4598083406212960039, guid: b98090d9755e206478c31cc5eda73b0f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -97024,6 +97028,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3444271811580793113, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5198638328134620159, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -97047,6 +97055,14 @@ PrefabInstance:
     - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: niveles.Array.size
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: niveles.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148216293642725058, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8349057527605040229, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -97087,6 +97103,10 @@ PrefabInstance:
     - target: {fileID: 8349057527605040229, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619136540232840397, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

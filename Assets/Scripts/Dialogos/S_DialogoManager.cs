@@ -52,7 +52,8 @@ public class S_DialogoManager : MonoBehaviour
     public void MostrarUI(bool mostrar)
     {
         Debug.Log("UIEntra");
-        dialUI.gameObject.SetActive(mostrar);
+        if(dialUI.gameObject!=null)
+            dialUI.gameObject.SetActive(mostrar);
         if (!mostrar)
         {
             dialUI.localIn = 0;

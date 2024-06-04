@@ -12,7 +12,7 @@ public class MenuMuerte : MonoBehaviour
     {
         // Aseguramos que la pantalla de muerte esté desactivada al inicio
         pantallaMuerte.SetActive(false);
-        Debug.Log("Entro en script muerte");
+        
     }
 
     void Update()

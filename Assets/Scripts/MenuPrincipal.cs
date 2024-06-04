@@ -40,10 +40,17 @@ public class MenuPrincipal : MonoBehaviour
     {
         if (GameManager.Instance.musicaInicio != null)
         {
-            GameManager.Instance.musicaInicio.Stop();
+            if (GameManager.Instance.musicaInicio.isPlaying)
+            {
+                GameManager.Instance.musicaInicio.Stop();
+                Debug.Log("Entro en is playing");
+            }
+            
+
         }
         if (GameManager.Instance.musicaJuego != null)
         {
+            Debug.Log("entro en play musica juego");
             GameManager.Instance.musicaJuego.Play();
         }
         if (GameManager.Instance.musicaPausa != null)

@@ -108,6 +108,10 @@ public class S_DialogoUI : MonoBehaviour
                     audioSource.Stop();
                     var audio = conversacion.dialogos[localIn].sonido;
                     audioSource.PlayOneShot(audio);
+
+
+                    // Si quieres asegurarte de que el sonido no se repita, puedes establecerlo a null
+                    audio = null;
                 }
                 anteriorBoton.gameObject.SetActive(localIn > 0);
 

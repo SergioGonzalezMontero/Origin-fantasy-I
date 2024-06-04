@@ -85,11 +85,11 @@ public class MenuMuerte : MonoBehaviour
         muerto = false;
         if (GameManager.Instance.musicaInicio != null)
         {
-            GameManager.Instance.musicaInicio.Play();
+            GameManager.Instance.musicaInicio.Stop();
         }
         if (GameManager.Instance.musicaJuego != null)
         {
-            GameManager.Instance.musicaJuego.Stop();
+            GameManager.Instance.musicaJuego.Play();
         }
         if (GameManager.Instance.musicaPausa != null)
         {

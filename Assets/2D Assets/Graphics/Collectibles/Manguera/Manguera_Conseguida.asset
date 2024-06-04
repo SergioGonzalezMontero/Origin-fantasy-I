@@ -17,7 +17,7 @@ MonoBehaviour:
   reUsar: 0
   dialogos:
   - personaje: {fileID: 11400000, guid: 8a2e73af70b36ea4588181f3a34a7b35, type: 2}
-    sonido: {fileID: 8300000, guid: ed270dcd01bdf0c409bf520c8eefba35, type: 3}
+    sonido: {fileID: 0}
     dialogo: Has conseguido la manguera.
   pregunta: {fileID: 0}
   Evento: 1

@@ -6,6 +6,9 @@ public class EfectoAparicion : MonoBehaviour
 {
     public float fadeDuration = 1.0f;  // Duración del fade-in en segundos
     public float startDelay = 2.0f;    // Retraso antes de que comience el fade-in
+    public bool imagenFinal;
+    public Sprite[] notas;
+
     private Image image;
     private TextMeshProUGUI text;
     private float timer;
@@ -20,6 +23,10 @@ public class EfectoAparicion : MonoBehaviour
         // Inicializar el color del componente a transparente
         if (image != null)
         {
+            if (imagenFinal)
+            {
+                image.sprite = notas[GameManager.Instance.nota - 5];
+            }
             Color color = image.color;
             color.a = 0f;
             image.color = color;
@@ -69,5 +76,12 @@ public class EfectoAparicion : MonoBehaviour
                 }
             }
         }
+    }
+
+    void setImagenFinal(Image image)
+    {
+        Debug.Log(image);
+        Debug.Log(GameManager.Instance.nota - 5);
+        //image.sprite = notas[GameManager.Instance.nota-5];
     }
 }

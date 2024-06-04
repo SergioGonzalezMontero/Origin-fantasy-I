@@ -5747,6 +5747,18 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: musicaJuego
+      value: 
+      objectReference: {fileID: 1191948456}
+    - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: musicaPausa
+      value: 
+      objectReference: {fileID: 1191948457}
+    - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: musicaInicio
+      value: 
+      objectReference: {fileID: 1191948458}
+    - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: pantallaMuerte
       value: 
       objectReference: {fileID: 1727796737}
@@ -5823,6 +5835,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f536112b62194734faf29966b3be652d, type: 3}
+--- !u!82 &1191948456 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8619136540232840397, guid: f536112b62194734faf29966b3be652d, type: 3}
+  m_PrefabInstance: {fileID: 1191948455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1191948457 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3444271811580793113, guid: f536112b62194734faf29966b3be652d, type: 3}
+  m_PrefabInstance: {fileID: 1191948455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1191948458 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8148216293642725058, guid: f536112b62194734faf29966b3be652d, type: 3}
+  m_PrefabInstance: {fileID: 1191948455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251128231 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3578310118775277811, guid: dfd011232ea9a0c48a97f49327268029, type: 3}

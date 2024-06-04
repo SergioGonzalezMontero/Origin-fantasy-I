@@ -996,6 +996,10 @@ PrefabInstance:
       propertyPath: musicaInicio
       value: 
       objectReference: {fileID: 1919450132}
+    - target: {fileID: 7837502232574885517, guid: f536112b62194734faf29966b3be652d, type: 3}
+      propertyPath: niveles.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8349057527605040229, guid: f536112b62194734faf29966b3be652d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.9967656

@@ -38,6 +38,18 @@ public class MenuMuerte : MonoBehaviour
     {
         if (!muerto)
         {
+            if (GameManager.Instance.musicaJuego != null)
+            {
+                GameManager.Instance.musicaJuego.Stop();
+            }
+            if (GameManager.Instance.musicaPausa != null)
+            {
+                GameManager.Instance.musicaPausa.Play();
+            }
+            if (GameManager.Instance.musicaInicio != null)
+            {
+                GameManager.Instance.musicaInicio.Stop();
+            }
             Debug.Log("Entro a lanzar la pantalla");
             muerto = true;  // Cambiamos el estado
             pantallaMuerte.SetActive(true);
@@ -50,6 +62,18 @@ public class MenuMuerte : MonoBehaviour
     {
         // Reanudamos el tiempo antes de cambiar de escena
         muerto = false;
+        if (GameManager.Instance.musicaInicio != null)
+        {
+            GameManager.Instance.musicaInicio.Play();
+        }
+        if (GameManager.Instance.musicaJuego != null)
+        {
+            GameManager.Instance.musicaJuego.Stop();
+        }
+        if (GameManager.Instance.musicaPausa != null)
+        {
+            GameManager.Instance.musicaPausa.Stop();
+        }
         Time.timeScale = 1f;
         pantallaMuerte.SetActive(false);
         GameManager.Instance.vidas = 6;
@@ -59,6 +83,18 @@ public class MenuMuerte : MonoBehaviour
     public void VolverAlJuego()
     {
         muerto = false;
+        if (GameManager.Instance.musicaInicio != null)
+        {
+            GameManager.Instance.musicaInicio.Play();
+        }
+        if (GameManager.Instance.musicaJuego != null)
+        {
+            GameManager.Instance.musicaJuego.Stop();
+        }
+        if (GameManager.Instance.musicaPausa != null)
+        {
+            GameManager.Instance.musicaPausa.Stop();
+        }
         pantallaMuerte.SetActive(false);  // Desactivamos la pantalla de muerte
         Time.timeScale = 1f;  // Reanudamos el juego
         Debug.Log("Juego reanudado y menú de muerte desactivado");

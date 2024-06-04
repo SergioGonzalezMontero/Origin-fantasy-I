@@ -16,13 +16,22 @@ public class MenuPrincipal : MonoBehaviour
     {
         if(video != null)
         {
-            video = GetComponent<VideoPlayer>();
+            //video = GetComponent<VideoPlayer>();
             video.isLooping = true;
             video.Play();
         }
         if (GameManager.Instance.musicaInicio != null)
         {
             GameManager.Instance.musicaInicio.Play();
+        }
+
+        if (GameManager.Instance.musicaJuego != null)
+        {
+            GameManager.Instance.musicaJuego.Stop();
+        }
+        if (GameManager.Instance.musicaPausa != null)
+        {
+            GameManager.Instance.musicaPausa.Stop();
         }
 
 
@@ -36,6 +45,10 @@ public class MenuPrincipal : MonoBehaviour
         if (GameManager.Instance.musicaJuego != null)
         {
             GameManager.Instance.musicaJuego.Play();
+        }
+        if (GameManager.Instance.musicaPausa != null)
+        {
+            GameManager.Instance.musicaPausa.Stop();
         }
 
         SceneManager.LoadScene(primeraEscena);

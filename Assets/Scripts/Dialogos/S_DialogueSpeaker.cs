@@ -21,40 +21,8 @@ public class S_DialogueSpeaker : MonoBehaviour
         dialLocalIn = 0;
 
 
-        ///////////
-        ////////////
-        ///////////
-        ///solo para pruebas, despues borrar
-        //foreach(var conv in conversacionesDisponibles)
-        //{
-        //    conv.finalizado = false;
-        //    var preg = conv.pregunta;
-        //    if(preg != null)
-        //    {
-        //        foreach (var opcion in preg.opciones)
-        //        {
-        //            opcion.convResultante.finalizado = false;
-        //        }
-        //    }
-        //}
-       // ///solo para pruebas, despues borrar
-         ///////////
-        ////////////
-        ///////////
-
     }
-    /// 
-    /// /////////////////////////////////////////////
-    /// /////////////////////////////////////////////
-    /// /////////////////////////////////////////////
-    /////////////////////////////////////////////
-    //IMPORTANTE PONERLE EL TAG PLAYER!!!!!!!!!!
-
-    /////////////////////////////////////////////
-    ////////////////////////////////////////////////
-    ////////////////////////////////////////////////
-    ////////////////////////////////////////////////
-    ////////////////////////////////////////////////
+   
 
     private bool playerInTrigger = false;
     public void Update()
@@ -152,8 +120,5 @@ public class S_DialogueSpeaker : MonoBehaviour
             return true;
         }
     }
-
-   
-   
 
 }

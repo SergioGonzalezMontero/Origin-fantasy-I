@@ -133,9 +133,4 @@ public class S_DialogoManager : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

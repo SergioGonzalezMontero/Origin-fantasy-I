@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desbloqueada: 1
   finalizado: 1
-  reUsar: 1
+  reUsar: 0
   dialogos:
   - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
     sonido: {fileID: 0}

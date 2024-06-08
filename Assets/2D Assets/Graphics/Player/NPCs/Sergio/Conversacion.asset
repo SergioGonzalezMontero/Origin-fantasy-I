@@ -21,7 +21,7 @@ MonoBehaviour:
     dialogo: "\xA1Hola Emilo!"
   - personaje: {fileID: 11400000, guid: 80aa7a4ad17055e4f94197bcc56abec6, type: 2}
     sonido: {fileID: 0}
-    dialogo: "Vas un poco tarde a tu presentacion, \xBFno?"
+    dialogo: "Vas un poco tarde a tu presentaci\xF3n, \xBFno?"
   - personaje: {fileID: 11400000, guid: 80aa7a4ad17055e4f94197bcc56abec6, type: 2}
     sonido: {fileID: 0}
     dialogo: "Bueno, no te distraigo, \xA1corre a tu aula!"

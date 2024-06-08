@@ -33,11 +33,11 @@ public class S_DialogueSpeaker : MonoBehaviour
             Conversar();
         }
 
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.Z))
-        {
-            Debug.Log("Pulso Z");
-            S_DialogoManager.instance.CambiarEstadoDeReUsable(conversacionesDisponibles[indexDeConversaciones], !conversacionesDisponibles[indexDeConversaciones].reUsar);
-        }
+        //if (playerInTrigger && Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    Debug.Log("Pulso Z");
+        //    S_DialogoManager.instance.CambiarEstadoDeReUsable(conversacionesDisponibles[indexDeConversaciones], !conversacionesDisponibles[indexDeConversaciones].reUsar);
+        //}
     }
 
     void OnTriggerExit2D(Collider2D other)

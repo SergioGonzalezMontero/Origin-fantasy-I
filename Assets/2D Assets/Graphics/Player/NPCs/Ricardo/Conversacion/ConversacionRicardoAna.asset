@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: ConversacionRicardoAna
   m_EditorClassIdentifier: 
   desbloqueada: 1
-  finalizado: 1
+  finalizado: 0
   reUsar: 1
   dialogos:
   - personaje: {fileID: 11400000, guid: c349b610415f3ba499e23116b9566a41, type: 2}
     sonido: {fileID: 0}
-    dialogo: "Menudo lio!! alguien a atascado los ba\xF1os."
+    dialogo: "\xA1\xA1Menudo lio!! alguien a atascado los ba\xF1os."
   - personaje: {fileID: 11400000, guid: d78e9c67a824e294db6aa14111fd7557, type: 2}
     sonido: {fileID: 0}
-    dialogo: You have to be very careful, we could get hurt !
+    dialogo: "Oh my good! Hay que tener cuidado, alguien podr\xEDa hacerse da\xF1o"
   - personaje: {fileID: 11400000, guid: c349b610415f3ba499e23116b9566a41, type: 2}
     sonido: {fileID: 0}
     dialogo: "Me pregunto como habr\xE1 pasado..."
   - personaje: {fileID: 11400000, guid: d78e9c67a824e294db6aa14111fd7557, type: 2}
     sonido: {fileID: 0}
-    dialogo: Good question...
+    dialogo: Buena pregunta...
   - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
     sonido: {fileID: 0}
     dialogo: '**No puedo entretenerme, tengo que pasar por el pasillo para tardar

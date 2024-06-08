@@ -43,13 +43,6 @@ public class EfectoAparicion : MonoBehaviour
         timer = 0f;
         isFadingIn = false;
 
-
-
-        if (imagenFinal)
-        {
-            Invoke("VolverEscenaInicio", startDelay + 3);
-        }
-
     }
 
     void Update()

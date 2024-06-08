@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EfectoAparicion : MonoBehaviour
@@ -40,6 +42,14 @@ public class EfectoAparicion : MonoBehaviour
 
         timer = 0f;
         isFadingIn = false;
+
+
+
+        if (imagenFinal)
+        {
+            Invoke("VolverEscenaInicio", startDelay + 3);
+        }
+
     }
 
     void Update()
@@ -74,14 +84,14 @@ public class EfectoAparicion : MonoBehaviour
                     color.a = Mathf.Clamp01(alpha);
                     text.color = color;
                 }
+                if (text != null)
+                {
+                    Color color = text.color;
+                    color.a = Mathf.Clamp01(alpha);
+                    text.color = color;
+                }
             }
         }
     }
 
-    void setImagenFinal(Image image)
-    {
-        Debug.Log(image);
-        Debug.Log(GameManager.Instance.nota - 5);
-        //image.sprite = notas[GameManager.Instance.nota-5];
-    }
 }

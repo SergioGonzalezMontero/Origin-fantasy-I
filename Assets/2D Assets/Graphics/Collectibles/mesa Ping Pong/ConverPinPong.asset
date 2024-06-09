@@ -18,7 +18,7 @@ MonoBehaviour:
   dialogos:
   - personaje: {fileID: 11400000, guid: a0d8fcf6feef4e944aac1590fef4bc45, type: 2}
     sonido: {fileID: 0}
-    dialogo: Que buena idea poner aqui una mesa de Pin Pong!!!
+    dialogo: "\xA1\xA1\xA1Qu\xE9 buena idea poner aqui una mesa de Ping Pong!!!"
   pregunta: {fileID: 0}
   Evento: 0
   EventCode: 

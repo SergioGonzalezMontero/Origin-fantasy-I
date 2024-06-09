@@ -36,6 +36,29 @@ public class MenuPrincipal : MonoBehaviour
 
 
     }
+    void Awake()
+    {
+        if (video != null)
+        {
+            //video = GetComponent<VideoPlayer>();
+            video.isLooping = true;
+            video.Play();
+        }
+        if (GameManager.Instance.musicaInicio != null)
+        {
+            GameManager.Instance.musicaInicio.Play();
+        }
+
+        if (GameManager.Instance.musicaJuego != null)
+        {
+            GameManager.Instance.musicaJuego.Stop();
+        }
+        if (GameManager.Instance.musicaPausa != null)
+        {
+            GameManager.Instance.musicaPausa.Stop();
+        }
+
+    }
     public void EmpezarJuego()
     {
         if (GameManager.Instance.musicaInicio != null)
@@ -44,9 +67,7 @@ public class MenuPrincipal : MonoBehaviour
             {
                 GameManager.Instance.musicaInicio.Stop();
                 Debug.Log("Entro en is playing");
-            }
-            
-
+            }           
         }
         if (GameManager.Instance.musicaJuego != null)
         {

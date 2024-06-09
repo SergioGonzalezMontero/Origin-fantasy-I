@@ -73,6 +73,7 @@ public class Cambio_Escena : MonoBehaviour
                         //StartCoroutine(LevelManager.instance.managerUI.antesNuevaTransicion());
                         //SceneManager.LoadScene("2. Patio_Inferior");
                         //StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+                        Debug.Log("Entro en el if y lanzo la corrutina desvanecer");
                         StartCoroutine(DesvanecerYTransicionar("2. Patio_Inferior"));
                     }
                     

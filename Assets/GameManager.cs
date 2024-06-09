@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         vidas = 0;
         
         
-        if (nota > 0)
+        if (nota > 5)
         {
             nota--;
         }

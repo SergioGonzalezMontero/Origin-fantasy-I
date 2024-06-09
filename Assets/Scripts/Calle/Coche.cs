@@ -43,7 +43,7 @@ public class Coche : MonoBehaviour
             {
                 gameObject.SetActive(false);
             }
-            else 
+            else
             {
                 ReturnToStart();
             }
@@ -71,4 +71,4 @@ public class Coche : MonoBehaviour
         GameManager.Instance.GameOver(GameManager.Instance.GetPantallaMuerte());
     }
 
-    }
+}

@@ -15,6 +15,8 @@ public class Coche_Freno : MonoBehaviour
     public Animator animator; // Referencia al componente Animator del coche
     public string nombreAnimacion;
 
+    public CapsuleCollider2D capsuleCollider;
+
     void Start()
     {
         tiempoHastaAparecer += Time.time;
@@ -31,6 +33,7 @@ public class Coche_Freno : MonoBehaviour
 
     void Update()
     {
+
         if (Time.time >= tiempoHastaAparecer)
         {
             //Debug.Log("Tiempo: " + tiempoHastaAparecer);
@@ -98,5 +101,22 @@ public class Coche_Freno : MonoBehaviour
     void StopCar()
     {
         braking = false;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("entra");
+
+        if (collision.gameObject.CompareTag("Player") && moving)
+        {
+            reiniciar();
+        }
+    }
+
+    private void reiniciar()
+    {
+        Debug.Log("matao");
+        StartCoroutine(LevelManager.instance.managerUI.nuevaTransicion());
+        GameManager.Instance.GameOver(GameManager.Instance.GetPantallaMuerte());
     }
 }

@@ -15,6 +15,10 @@ public class Autobus : MonoBehaviour
 
     void Start()
     {
+        if (GameManager.Instance.nota != 10)
+        {
+            Disappear();
+        }
         // Calcular la tasa de aceleración
         accelerationRate = maxSpeed / accelerationTime;
 

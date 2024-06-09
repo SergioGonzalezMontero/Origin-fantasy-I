@@ -27,7 +27,7 @@ public class EfectoAparicion : MonoBehaviour
         {
             if (imagenFinal)
             {
-                image.sprite = notas[GameManager.Instance.nota - 5];
+                image.sprite = notas[GameManager.Instance.nota];
             }
             Color color = image.color;
             color.a = 0f;

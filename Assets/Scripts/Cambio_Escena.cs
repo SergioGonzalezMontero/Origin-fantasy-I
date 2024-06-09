@@ -148,6 +148,18 @@ public class Cambio_Escena : MonoBehaviour
                     {
                         //SceneManager.LoadScene("7. EdificioC_C1");
                         StartCoroutine(DesvanecerYTransicionar("7. EdificioC_C1"));
+                        if (GameManager.Instance.musicaInicio != null)
+                        {
+                            GameManager.Instance.musicaInicio.Stop();
+                        }
+                        if (GameManager.Instance.musicaJuego != null)
+                        {
+                            GameManager.Instance.musicaJuego.Pause();
+                        }
+                        if (GameManager.Instance.musicaPausa != null)
+                        {
+                            GameManager.Instance.musicaPausa.Play();
+                        }
                     }
 
 

@@ -57,7 +57,7 @@ public class MenuPrincipal : MonoBehaviour
         {
             GameManager.Instance.musicaPausa.Stop();
         }
-
+        GameManager.Instance.nota = 10;
     }
     public void EmpezarJuego()
     {
